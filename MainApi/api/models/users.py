@@ -60,3 +60,8 @@ def get_all_users() -> list:
     """
     users = get_user_collection()
     return list(users.find({}, {"_id": 0, "password": 0}))
+
+def get_user_by_email(email: str) -> dict:
+    """Retrieves a user by their email."""
+    users = get_user_collection()
+    return users.find_one({"email": email}, {"_id": 0})

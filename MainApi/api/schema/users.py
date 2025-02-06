@@ -1,7 +1,7 @@
 """Pydantic schemas for user validation."""
 
 import uuid
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, EmailStr, Field, constr
 
 # User Role Constants
 DOCTOR = "doctor"
@@ -13,7 +13,7 @@ class UserBase(BaseModel):
     """Base schema for a user."""
     email: EmailStr
     full_name: str
-    role: str = Field(..., regex=f"^({'|'.join(VALID_ROLES)})$")
+    role: constr(pattern=f"^({'|'.join(VALID_ROLES)})$")
 
 class UserCreate(UserBase):
     """Schema for creating a new user."""
@@ -21,4 +21,16 @@ class UserCreate(UserBase):
 
 class UserDB(UserBase):
     """Schema for a user stored in the database."""
-    id: uuid.uuid4
+    id: uuid.UUID
+
+# -------- Authentication Schemas --------
+
+class LoginRequest(BaseModel):
+    """Schema for login request."""
+    email: EmailStr
+    password: str
+
+class TokenResponse(BaseModel):
+    """Schema for JWT token response."""
+    access_token: str
+    token_type: str = "bearer"

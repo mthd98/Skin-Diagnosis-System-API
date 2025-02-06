@@ -1,1 +1,0 @@
-# Defines functions for validation.

@@ -12,6 +12,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.routers import cases, users
 import uvicorn
+from api.middleware.auth import AuthMiddleware  # Import the middleware
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -30,6 +32,7 @@ def create_app() -> FastAPI:
     )
 
     app.add_middleware(
+        AuthMiddleware,
         CORSMiddleware,
         allow_origins=["*"],
         allow_credentials=True,
