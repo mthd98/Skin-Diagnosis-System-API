@@ -37,8 +37,9 @@ class MongoDBHandler:
         self.MONGO_USERNAME = os.getenv("MONGO_USERNAME")
         self.MONGO_PASSWORD = os.getenv("MONGO_PASSWORD")
         self.DB_NAME = os.getenv("DB_NAME", "skin_diagnosis_db")
+        self.MONGO_CLUSTER = os.getenv("MONGO_CLUSTER","cluster0.sst2o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
         self.MONGO_URI = (
-            f"mongodb+srv://{self.MONGO_USERNAME}:{self.MONGO_PASSWORD}@cluster0.sst2o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+            f"mongodb+srv://{self.MONGO_USERNAME}:{self.MONGO_PASSWORD}@{self.MONGO_CLUSTER}"
         )
         self.client = None  # Client will be initialized in the connect() method
 

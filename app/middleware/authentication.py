@@ -19,7 +19,7 @@ class AuthMiddleware(BaseHTTPMiddleware):
                 return await call_next(request)
 
             # Public routes that don't require authentication
-            public_routes = ["/users/register-doctor", "/users/login", "/docs", "/openapi.json", "/redoc","/cases/upload-image"]
+            public_routes = ["/users/register-doctor", "/users/login", "/docs", "/openapi.json", "/redoc"]
             if request.url.path in public_routes:
                 logger.info(f"Skipping authentication for public route: {request.url.path}")
                 return await call_next(request)

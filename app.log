@@ -2432,3 +2432,294 @@ AttributeError: module 'fastapi.requests' has no attribute 'post'
 2025-02-09 00:40:12,322 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
 2025-02-09 00:40:12,425 - app.models.patient - INFO - Patient found: Jane Smith (patient_number: 77748010)
 2025-02-09 00:40:12,425 - httpx - INFO - HTTP Request: GET http://testserver/users/patients/77748010 "HTTP/1.1 200 OK"
+2025-02-10 13:36:30,750 - app.middleware.authentication - INFO - Checking Authorization header for /
+2025-02-10 13:36:30,760 - app.middleware.authentication - WARNING - Missing or invalid Authorization header on /
+2025-02-10 13:36:30,762 - app.middleware.authentication - ERROR - HTTPException on /: Missing or invalid Authorization header
+2025-02-10 13:36:31,454 - app.middleware.authentication - INFO - Checking Authorization header for /favicon.ico
+2025-02-10 13:36:31,459 - app.middleware.authentication - WARNING - Missing or invalid Authorization header on /favicon.ico
+2025-02-10 13:36:31,461 - app.middleware.authentication - ERROR - HTTPException on /favicon.ico: Missing or invalid Authorization header
+2025-02-10 13:36:34,047 - app.middleware.authentication - INFO - Skipping authentication for public route: /docs
+2025-02-10 13:36:34,777 - app.middleware.authentication - INFO - Skipping authentication for public route: /openapi.json
+2025-02-10 13:37:05,007 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/login
+2025-02-10 13:37:05,041 - app.routers.users - INFO - Doctor Sign in input: {'email': 'Test03@test.com', 'password': '@Test123'}
+2025-02-10 13:37:05,044 - app.utils.authentication - INFO - Attempting to authenticate doctor with email: Test03@test.com
+2025-02-10 13:37:05,046 - root - INFO - Getting database: Users
+2025-02-10 13:37:05,046 - root - INFO - Getting collection: Doctors
+2025-02-10 13:37:05,050 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:37:06,119 - app.utils.authentication - INFO - JWT access token generated successfully for email: Test03@test.com
+2025-02-10 13:38:30,917 - app.middleware.authentication - INFO - Checking Authorization header for /users/my-patients
+2025-02-10 13:38:30,920 - app.middleware.authentication - ERROR - HTTPException on /users/my-patients: Invalid token
+2025-02-10 13:38:33,133 - app.middleware.authentication - INFO - Checking Authorization header for /users/my-patients
+2025-02-10 13:38:33,136 - app.middleware.authentication - ERROR - HTTPException on /users/my-patients: Invalid token
+2025-02-10 13:38:53,834 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-10 13:38:53,834 - app.middleware.authentication - INFO - Valid token received for /users/patients/12345
+2025-02-10 13:38:53,838 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 13:38:53,839 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5NjU5NzQ0fQ.hq_CWgxwEhXWK7V7AcsIHKdx8H2aTgstgMSoFmgVWpA
+2025-02-10 13:38:53,839 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 13:38:53,839 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739659744}
+2025-02-10 13:38:53,841 - root - INFO - Getting database: Users
+2025-02-10 13:38:53,841 - root - INFO - Getting collection: Doctors
+2025-02-10 13:38:53,843 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:38:53,943 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 13:38:53,955 - app.models.patient - INFO - Fetching patient with patient_number: 12345
+2025-02-10 13:38:53,955 - root - INFO - Getting database: Users
+2025-02-10 13:38:53,957 - root - INFO - Getting collection: Patients
+2025-02-10 13:38:53,957 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-10 13:38:54,071 - app.models.patient - INFO - Patient found: Patient01 (patient_number: 12345)
+2025-02-10 13:39:08,403 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-10 13:39:08,403 - app.middleware.authentication - INFO - Valid token received for /users/patients/12345
+2025-02-10 13:39:08,407 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 13:39:08,409 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5NjU5NzQ0fQ.hq_CWgxwEhXWK7V7AcsIHKdx8H2aTgstgMSoFmgVWpA
+2025-02-10 13:39:08,412 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 13:39:08,414 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739659744}
+2025-02-10 13:39:08,416 - root - INFO - Getting database: Users
+2025-02-10 13:39:08,418 - root - INFO - Getting collection: Doctors
+2025-02-10 13:39:08,418 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:39:08,527 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 13:39:08,530 - app.models.patient - INFO - Fetching patient with patient_number: 12345
+2025-02-10 13:39:08,530 - root - INFO - Getting database: Users
+2025-02-10 13:39:08,535 - root - INFO - Getting collection: Patients
+2025-02-10 13:39:08,538 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-10 13:39:08,655 - app.models.patient - INFO - Patient found: Patient01 (patient_number: 12345)
+2025-02-10 13:39:11,410 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-10 13:39:11,410 - app.middleware.authentication - INFO - Valid token received for /users/patients/12345
+2025-02-10 13:39:11,410 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 13:39:11,410 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5NjU5NzQ0fQ.hq_CWgxwEhXWK7V7AcsIHKdx8H2aTgstgMSoFmgVWpA
+2025-02-10 13:39:11,410 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 13:39:11,417 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739659744}
+2025-02-10 13:39:11,417 - root - INFO - Getting database: Users
+2025-02-10 13:39:11,419 - root - INFO - Getting collection: Doctors
+2025-02-10 13:39:11,419 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:39:11,525 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 13:39:11,530 - app.models.patient - INFO - Fetching patient with patient_number: 12345
+2025-02-10 13:39:11,531 - root - INFO - Getting database: Users
+2025-02-10 13:39:11,531 - root - INFO - Getting collection: Patients
+2025-02-10 13:39:11,533 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-10 13:39:11,646 - app.models.patient - INFO - Patient found: Patient01 (patient_number: 12345)
+2025-02-10 13:39:48,936 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-10 13:39:48,936 - app.middleware.authentication - ERROR - HTTPException on /users/patients/12345: Invalid token
+2025-02-10 13:41:03,941 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-10 13:41:18,110 - app.middleware.authentication - INFO - Skipping authentication for public route: /docs
+2025-02-10 13:41:18,679 - app.middleware.authentication - INFO - Skipping authentication for public route: /openapi.json
+2025-02-10 13:41:30,312 - app.middleware.authentication - INFO - Checking Authorization header for /users/register-doctor
+2025-02-10 13:41:30,312 - app.middleware.authentication - WARNING - Missing or invalid Authorization header on /users/register-doctor
+2025-02-10 13:41:30,312 - app.middleware.authentication - ERROR - HTTPException on /users/register-doctor: Missing or invalid Authorization header
+2025-02-10 13:41:40,598 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-10 13:42:00,991 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/register-doctor
+2025-02-10 13:42:01,044 - app.routers.users - INFO - Doctor registration input: {'email': 'test07@test.com', 'name': 'Tester five', 'password': '@Test123'}
+2025-02-10 13:42:01,046 - root - INFO - Getting database: Users
+2025-02-10 13:42:01,046 - root - INFO - Getting collection: Doctors
+2025-02-10 13:42:01,046 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:42:01,157 - app.models.doctor - INFO - Creating doctor profile for email: test07@test.com
+2025-02-10 13:42:01,159 - root - INFO - Getting database: Users
+2025-02-10 13:42:01,162 - root - INFO - Getting collection: Doctors
+2025-02-10 13:42:01,162 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:42:02,215 - root - INFO - Getting database: Users
+2025-02-10 13:42:02,217 - root - INFO - Getting collection: Users-API-Keys
+2025-02-10 13:42:02,432 - app.models.api_key - INFO - API key allocated successfully for doctor ID: 656acb7f-5a3e-4249-8285-d339dfdd7254
+2025-02-10 13:42:02,432 - app.models.doctor - INFO - Doctor created successfully with id: 656acb7f-5a3e-4249-8285-d339dfdd7254
+2025-02-10 13:42:02,432 - app.routers.users - INFO - Doctor successfully created.
+2025-02-10 13:42:17,084 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/login
+2025-02-10 13:42:17,092 - app.routers.users - INFO - Doctor Sign in input: {'email': 'Test07@test.com', 'password': '@Test123'}
+2025-02-10 13:42:17,094 - app.utils.authentication - INFO - Attempting to authenticate doctor with email: Test07@test.com
+2025-02-10 13:42:17,094 - root - INFO - Getting database: Users
+2025-02-10 13:42:17,096 - root - INFO - Getting collection: Doctors
+2025-02-10 13:42:17,096 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:42:18,112 - app.utils.authentication - INFO - JWT access token generated successfully for email: Test07@test.com
+2025-02-10 13:42:40,495 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-10 13:42:40,495 - app.middleware.authentication - INFO - Valid token received for /users/patients/12345
+2025-02-10 13:42:40,498 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 13:42:40,500 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmFjYjdmLTVhM2UtNDI0OS04Mjg1LWQzMzlkZmRkNzI1NCIsImVtYWlsIjoidGVzdDA3QHRlc3QuY29tIiwiZXhwIjoxNzM5Nzk0OTM4fQ.J_bFTpqAYiboOUCpWetaLdZyuqMcMiTRVzDVfhC--YA
+2025-02-10 13:42:40,500 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 13:42:40,500 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '656acb7f-5a3e-4249-8285-d339dfdd7254', 'email': 'test07@test.com', 'exp': 1739794938}
+2025-02-10 13:42:40,500 - root - INFO - Getting database: Users
+2025-02-10 13:42:40,500 - root - INFO - Getting collection: Doctors
+2025-02-10 13:42:40,500 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:42:40,610 - app.models.doctor - INFO - Doctor with id 656acb7f-5a3e-4249-8285-d339dfdd7254 successfully authenticated.
+2025-02-10 13:42:40,617 - app.models.patient - INFO - Fetching patient with patient_number: 12345
+2025-02-10 13:42:40,617 - root - INFO - Getting database: Users
+2025-02-10 13:42:40,617 - root - INFO - Getting collection: Patients
+2025-02-10 13:42:40,621 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-10 13:42:40,730 - app.models.patient - WARNING - Patient with patient_number 12345 not found for doctor 656acb7f-5a3e-4249-8285-d339dfdd7254
+2025-02-10 13:42:40,730 - app.models.patient - ERROR - Error retrieving patient: Patient with patient_number 12345 not found.
+2025-02-10 13:43:59,745 - app.middleware.authentication - INFO - Checking Authorization header for /cases/cases/doctor/cases
+2025-02-10 13:43:59,745 - app.middleware.authentication - INFO - Valid token received for /cases/cases/doctor/cases
+2025-02-10 13:43:59,752 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 13:43:59,752 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmFjYjdmLTVhM2UtNDI0OS04Mjg1LWQzMzlkZmRkNzI1NCIsImVtYWlsIjoidGVzdDA3QHRlc3QuY29tIiwiZXhwIjoxNzM5Nzk0OTM4fQ.J_bFTpqAYiboOUCpWetaLdZyuqMcMiTRVzDVfhC--YA
+2025-02-10 13:43:59,752 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 13:43:59,752 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '656acb7f-5a3e-4249-8285-d339dfdd7254', 'email': 'test07@test.com', 'exp': 1739794938}
+2025-02-10 13:43:59,752 - root - INFO - Getting database: Users
+2025-02-10 13:43:59,752 - root - INFO - Getting collection: Doctors
+2025-02-10 13:43:59,752 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:43:59,868 - app.models.doctor - INFO - Doctor with id 656acb7f-5a3e-4249-8285-d339dfdd7254 successfully authenticated.
+2025-02-10 13:43:59,869 - root - INFO - Getting database: Cases
+2025-02-10 13:43:59,869 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-10 13:43:59,869 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-10 13:43:59,983 - app.models.case - WARNING - No cases found for doctor ID cases.
+2025-02-10 13:44:00,190 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-10 13:44:29,862 - app.middleware.authentication - INFO - Checking Authorization header for /cases/cases/doctor/cases
+2025-02-10 13:44:29,862 - app.middleware.authentication - INFO - Valid token received for /cases/cases/doctor/cases
+2025-02-10 13:44:29,862 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 13:44:29,862 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5Nzk0NjI2fQ.RpQrMZROIlnKRKcBGva1RH5ZQ6tn_Vw9BMv0FAu10F0
+2025-02-10 13:44:29,870 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 13:44:29,871 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739794626}
+2025-02-10 13:44:29,873 - root - INFO - Getting database: Users
+2025-02-10 13:44:29,876 - root - INFO - Getting collection: Doctors
+2025-02-10 13:44:29,878 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:44:29,991 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 13:44:46,557 - app.middleware.authentication - INFO - Checking Authorization header for /cases/cases/doctor/cases
+2025-02-10 13:44:46,557 - app.middleware.authentication - INFO - Valid token received for /cases/cases/doctor/cases
+2025-02-10 13:44:46,557 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 13:44:46,557 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5Nzk0NjI2fQ.RpQrMZROIlnKRKcBGva1RH5ZQ6tn_Vw9BMv0FAu10F0
+2025-02-10 13:44:46,557 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 13:44:46,565 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739794626}
+2025-02-10 13:44:46,565 - root - INFO - Getting database: Users
+2025-02-10 13:44:46,565 - root - INFO - Getting collection: Doctors
+2025-02-10 13:44:46,565 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:44:46,682 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 13:44:56,995 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/login
+2025-02-10 13:44:57,023 - app.routers.users - INFO - Doctor Sign in input: {'email': 'Test03@test.com', 'password': '@Test123'}
+2025-02-10 13:44:57,025 - app.utils.authentication - INFO - Attempting to authenticate doctor with email: Test03@test.com
+2025-02-10 13:44:57,025 - root - INFO - Getting database: Users
+2025-02-10 13:44:57,025 - root - INFO - Getting collection: Doctors
+2025-02-10 13:44:57,027 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:44:58,154 - app.utils.authentication - INFO - JWT access token generated successfully for email: Test03@test.com
+2025-02-10 13:45:21,643 - app.middleware.authentication - INFO - Checking Authorization header for /cases/cases/doctor/cases
+2025-02-10 13:45:21,643 - app.middleware.authentication - INFO - Valid token received for /cases/cases/doctor/cases
+2025-02-10 13:45:21,646 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 13:45:21,646 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5Nzk1MDk4fQ._77uD2_-WYYMZpP496uNpjb49wXBdOcC9qlTcqORqZA
+2025-02-10 13:45:21,646 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 13:45:21,646 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739795098}
+2025-02-10 13:45:21,646 - root - INFO - Getting database: Users
+2025-02-10 13:45:21,653 - root - INFO - Getting collection: Doctors
+2025-02-10 13:45:21,655 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:45:21,769 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 13:45:35,383 - app.middleware.authentication - INFO - Checking Authorization header for /cases/cases/doctor/57219736-b2ee-4454-92aa-e87a2b56dc03
+2025-02-10 13:45:35,392 - app.middleware.authentication - INFO - Valid token received for /cases/cases/doctor/57219736-b2ee-4454-92aa-e87a2b56dc03
+2025-02-10 13:46:05,166 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-10 13:46:31,567 - app.middleware.authentication - INFO - Checking Authorization header for /cases/cases/doctor/cases
+2025-02-10 13:46:31,569 - app.middleware.authentication - INFO - Valid token received for /cases/cases/doctor/cases
+2025-02-10 13:46:31,571 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 13:46:31,572 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5Nzk1MDk4fQ._77uD2_-WYYMZpP496uNpjb49wXBdOcC9qlTcqORqZA
+2025-02-10 13:46:31,572 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 13:46:31,572 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739795098}
+2025-02-10 13:46:31,572 - root - INFO - Getting database: Users
+2025-02-10 13:46:31,572 - root - INFO - Getting collection: Doctors
+2025-02-10 13:46:31,572 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:46:31,686 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 13:47:19,501 - app.middleware.authentication - INFO - Checking Authorization header for /cases/cases/doctor/57219736-b2ee-4454-92aa-e87a2b56dc03
+2025-02-10 13:47:19,504 - app.middleware.authentication - INFO - Valid token received for /cases/cases/doctor/57219736-b2ee-4454-92aa-e87a2b56dc03
+2025-02-10 13:47:19,790 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-10 13:57:22,452 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-10 13:57:36,705 - app.middleware.authentication - INFO - Checking Authorization header for /cases/cases/doctor/57219736-b2ee-4454-92aa-e87a2b56dc03
+2025-02-10 13:57:36,705 - app.middleware.authentication - INFO - Valid token received for /cases/cases/doctor/57219736-b2ee-4454-92aa-e87a2b56dc03
+2025-02-10 13:57:36,715 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 13:57:36,717 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5Nzk1MDk4fQ._77uD2_-WYYMZpP496uNpjb49wXBdOcC9qlTcqORqZA
+2025-02-10 13:57:36,718 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 13:57:36,721 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739795098}
+2025-02-10 13:57:36,721 - root - INFO - Getting database: Users
+2025-02-10 13:57:36,724 - root - INFO - Getting collection: Doctors
+2025-02-10 13:57:36,727 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:57:36,836 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 13:57:36,836 - root - INFO - Getting database: Cases
+2025-02-10 13:57:36,836 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-10 13:57:36,836 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-10 13:57:36,970 - app.models.case - ERROR - An unexpected error occurred while retrieving cases: 2 validation errors for Case
+notes
+  Input should be a valid string [type=string_type, input_value=[], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+case_id
+  Field required [type=missing, input_value={'id': 'acec3bba-e4a0-465... 2, 9, 0, 18, 42, 6000)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "C:\Users\thaba\Documents\Artificial Intelligence\Group Project\Code\Skin-Diagnosis-System-API\app\models\case.py", line 161, in get_cases_by_doctor
+    case_data = jsonable_encoder(Case(**case))
+                                 ^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for Case
+notes
+  Input should be a valid string [type=string_type, input_value=[], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+case_id
+  Field required [type=missing, input_value={'id': 'acec3bba-e4a0-465... 2, 9, 0, 18, 42, 6000)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-02-10 13:59:09,062 - app.middleware.authentication - INFO - Checking Authorization header for /cases/cases/doctor/57219736-b2ee-4454-92aa-e87a2b56dc03
+2025-02-10 13:59:09,063 - app.middleware.authentication - INFO - Valid token received for /cases/cases/doctor/57219736-b2ee-4454-92aa-e87a2b56dc03
+2025-02-10 13:59:09,068 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 13:59:09,068 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5Nzk1MDk4fQ._77uD2_-WYYMZpP496uNpjb49wXBdOcC9qlTcqORqZA
+2025-02-10 13:59:09,070 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 13:59:09,070 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739795098}
+2025-02-10 13:59:09,079 - root - INFO - Getting database: Users
+2025-02-10 13:59:09,079 - root - INFO - Getting collection: Doctors
+2025-02-10 13:59:09,080 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 13:59:09,191 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 13:59:09,195 - root - INFO - Getting database: Cases
+2025-02-10 13:59:09,195 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-10 13:59:09,195 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-10 13:59:09,317 - app.models.case - INFO - Retrieved 6 case(s) for doctor_id: 57219736-b2ee-4454-92aa-e87a2b56dc03
+2025-02-10 13:59:47,189 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-10 13:59:58,970 - app.middleware.authentication - INFO - Checking Authorization header for /cases/get_cases
+2025-02-10 13:59:58,973 - app.middleware.authentication - INFO - Valid token received for /cases/get_cases
+2025-02-10 14:00:01,958 - app.middleware.authentication - INFO - Checking Authorization header for /cases/get_cases
+2025-02-10 14:00:01,958 - app.middleware.authentication - INFO - Valid token received for /cases/get_cases
+2025-02-10 14:00:44,877 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-10 14:00:57,294 - app.middleware.authentication - INFO - Checking Authorization header for /cases/get_cases
+2025-02-10 14:00:57,294 - app.middleware.authentication - INFO - Valid token received for /cases/get_cases
+2025-02-10 14:00:57,303 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 14:00:57,303 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5Nzk1MDk4fQ._77uD2_-WYYMZpP496uNpjb49wXBdOcC9qlTcqORqZA
+2025-02-10 14:00:57,305 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 14:00:57,307 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739795098}
+2025-02-10 14:00:57,307 - root - INFO - Getting database: Users
+2025-02-10 14:00:57,308 - root - INFO - Getting collection: Doctors
+2025-02-10 14:00:57,308 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 14:00:57,432 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 14:01:08,388 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-10 14:01:18,377 - app.middleware.authentication - INFO - Checking Authorization header for /cases/get_cases
+2025-02-10 14:01:18,377 - app.middleware.authentication - INFO - Valid token received for /cases/get_cases
+2025-02-10 14:01:18,384 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 14:01:18,384 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5Nzk1MDk4fQ._77uD2_-WYYMZpP496uNpjb49wXBdOcC9qlTcqORqZA
+2025-02-10 14:01:18,384 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 14:01:18,390 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739795098}
+2025-02-10 14:01:18,390 - root - INFO - Getting database: Users
+2025-02-10 14:01:18,392 - root - INFO - Getting collection: Doctors
+2025-02-10 14:01:18,393 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 14:01:18,500 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 14:01:18,507 - root - INFO - Getting database: Cases
+2025-02-10 14:01:18,507 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-10 14:01:18,507 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-10 14:01:18,626 - app.models.case - INFO - Retrieved 6 case(s) for doctor_id: 57219736-b2ee-4454-92aa-e87a2b56dc03
+2025-02-10 14:01:37,599 - app.middleware.authentication - INFO - Checking Authorization header for /users/doctors
+2025-02-10 14:01:37,599 - app.middleware.authentication - INFO - Valid token received for /users/doctors
+2025-02-10 14:01:37,605 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 14:01:37,607 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5Nzk1MDk4fQ._77uD2_-WYYMZpP496uNpjb49wXBdOcC9qlTcqORqZA
+2025-02-10 14:01:37,607 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 14:01:37,607 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739795098}
+2025-02-10 14:01:37,607 - root - INFO - Getting database: Users
+2025-02-10 14:01:37,610 - root - INFO - Getting collection: Doctors
+2025-02-10 14:01:37,610 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 14:01:37,721 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 14:01:37,724 - root - INFO - Getting database: Users
+2025-02-10 14:01:37,724 - root - INFO - Getting collection: Doctors
+2025-02-10 14:01:37,726 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 14:06:09,602 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-10 14:06:26,234 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-10 14:06:52,208 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-10 14:06:52,208 - app.middleware.authentication - INFO - Valid token received for /users/patients/12345
+2025-02-10 14:06:52,213 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-10 14:06:52,213 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MjE5NzM2LWIyZWUtNDQ1NC05MmFhLWU4N2EyYjU2ZGMwMyIsImVtYWlsIjoidGVzdDAzQHRlc3QuY29tIiwiZXhwIjoxNzM5Nzk1MDk4fQ._77uD2_-WYYMZpP496uNpjb49wXBdOcC9qlTcqORqZA
+2025-02-10 14:06:52,213 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-10 14:06:52,216 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '57219736-b2ee-4454-92aa-e87a2b56dc03', 'email': 'test03@test.com', 'exp': 1739795098}
+2025-02-10 14:06:52,218 - root - INFO - Getting database: Users
+2025-02-10 14:06:52,218 - root - INFO - Getting collection: Doctors
+2025-02-10 14:06:52,220 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-10 14:06:52,331 - app.models.doctor - INFO - Doctor with id 57219736-b2ee-4454-92aa-e87a2b56dc03 successfully authenticated.
+2025-02-10 14:06:52,338 - app.models.patient - INFO - Fetching patient with patient_number: 12345
+2025-02-10 14:06:52,339 - root - INFO - Getting database: Users
+2025-02-10 14:06:52,339 - root - INFO - Getting collection: Patients
+2025-02-10 14:06:52,339 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-10 14:06:52,457 - app.models.patient - INFO - Patient found: Patient01 (patient_number: 12345)
+2025-02-10 14:07:48,158 - app.middleware.authentication - INFO - Skipping authentication for public route: /docs
+2025-02-10 14:07:48,621 - app.middleware.authentication - INFO - Skipping authentication for public route: /openapi.json
+2025-02-10 14:10:34,078 - app.main - INFO - Application shutdown: Disconnected from MongoDB

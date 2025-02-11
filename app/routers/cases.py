@@ -53,9 +53,8 @@ def get_case(case_id: str):
     return get_case_by_id(case_id)
 
 # -------- Get All Cases by Doctor (Accessible by Doctors & SuperUsers) -------- #
-@router.get("/cases/doctor/{doctor_id}", status_code=status.HTTP_200_OK)
+@router.get("/get_cases", status_code=status.HTTP_200_OK)
 def get_doctor_cases(
-    doctor_id: str, 
     credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
     current_doctor: dict = Depends(get_current_doctor)
 ):
@@ -70,7 +69,7 @@ def get_doctor_cases(
     Returns:
         JSONResponse: A JSON response containing the list of cases assigned to the doctor.
     """
-    return get_cases_by_doctor(doctor_id)
+    return get_cases_by_doctor(current_doctor)
 
 # -------- Get All Cases by Patient (Accessible by Doctors, SuperUsers, and Patients) -------- #
 @router.get("/cases/patient/{patient_id}", status_code=status.HTTP_200_OK)

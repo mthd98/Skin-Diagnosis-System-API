@@ -129,7 +129,7 @@ def get_case_by_id(case_id: str) -> JSONResponse:
             detail=f"An error occurred while retrieving the case: {str(error)}"
         )
    
-def get_cases_by_doctor(doctor_id: str) -> JSONResponse:
+def get_cases_by_doctor(doctor: dict) -> JSONResponse:
     """
     Retrieve all cases assigned to a specific doctor using the doctor's ID.
 
@@ -140,6 +140,8 @@ def get_cases_by_doctor(doctor_id: str) -> JSONResponse:
         JSONResponse: A JSON response containing a list of case documents associated with the doctor.
     """
     try:
+        
+        doctor_id = doctor["doctor_id"]
         # Retrieve all cases for the given doctor_id, excluding the internal '_id' field
         cases_cursor = get_case_collection().find({"doctor_id": doctor_id}, {"_id": 0})
         cases_list = list(cases_cursor)
