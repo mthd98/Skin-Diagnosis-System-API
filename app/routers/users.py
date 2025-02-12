@@ -13,7 +13,7 @@ import logging
 from fastapi import APIRouter, HTTPException, Depends, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from app.models.doctor import create_doctor, get_all_doctors, get_doctor_by_email, get_current_doctor
-from app.models.patient import create_patient, get_patient_by_patient_number, get_patients_by_doctor
+from app.models.patient import create_patient, get_patient_by_patient_number
 from app.schema.doctor import DoctorCreate
 from app.schema.patient import PatientCreate
 from app.schema.authentication import LoginRequest
@@ -119,24 +119,23 @@ def get_doctors(credentials: HTTPAuthorizationCredentials = Depends(bearer_schem
 
 # -------- Get Patients for Logged-in Doctor --------
 
-@router.get("/my-patients", status_code=status.HTTP_200_OK)
-def get_my_patients(credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
-                current_doctor: dict = Depends(get_current_doctor)
-                ):
-    try:
-        patients = get_patients_by_doctor(current_doctor)
-        return {"status": "success", "patients": patients}
+# @router.get("/my-patients", status_code=status.HTTP_200_OK)
+# def get_my_patients(credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
+#                 current_doctor: dict = Depends(get_current_doctor)
+#                 ):
+#     try:
+#         patients = get_patients_by_doctor(current_doctor)
+#         return {"status": "success", "patients": patients}
 
-    except Exception as e:
-        logger.error(f"Error retrieving patients: {str(e)}")
-        return {"status": "error", "message": f"Error retrieving patients: {str(e)}"}
+#     except Exception as e:
+#         logger.error(f"Error retrieving patients: {str(e)}")
+#         return {"status": "error", "message": f"Error retrieving patients: {str(e)}"}
 
 @router.get("/patients/{patient_number}", status_code=status.HTTP_200_OK)
 def get_patient(patient_number: int, 
-                     credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme), 
-                     current_doctor: dict = Depends(get_current_doctor)
-                     ):
+                credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme)
+                ):
     """
     API Endpoint to get a patient by patient number.
     """
-    return get_patient_by_patient_number(patient_number, current_doctor)
+    return get_patient_by_patient_number(patient_number)

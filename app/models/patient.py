@@ -98,7 +98,6 @@ def create_patient(patient_info: PatientCreate, current_doctor: dict) -> JSONRes
         patient_data = {
             "patient_id": str(uuid.uuid4()),
             "patient_number": patient_number,
-            "doctor_id": doctor_id,
             "name": name,
             "date_of_birth": date_of_birth,
             "gender": gender,
@@ -136,27 +135,27 @@ def create_patient(patient_info: PatientCreate, current_doctor: dict) -> JSONRes
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         )
 
-def get_patients_by_doctor(current_doctor: dict = Depends(get_current_doctor)) -> JSONResponse:
-    """
-    Retrieves all patients linked to the currently logged-in doctor.
+# def get_patients_by_doctor(current_doctor: dict = Depends(get_current_doctor)) -> JSONResponse:
+#     """
+#     Retrieves all patients linked to the currently logged-in doctor.
 
-    Args:
-        current_doctor (dict): The currently logged-in doctor's details.
+#     Args:
+#         current_doctor (dict): The currently logged-in doctor's details.
 
-    Returns:
-        JSONResponse: A JSON response containing a list of patient objects associated with the doctor.
-    """
-    try:
-        patients = get_patient_collection()
-        patient_cursor = patients.find({"doctor_id": current_doctor["id"]}, {"_id": 0})
-        patient_list = list(patient_cursor)
-        return JSONResponse(content={"patients": patient_list}, status_code=status.HTTP_200_OK)
+#     Returns:
+#         JSONResponse: A JSON response containing a list of patient objects associated with the doctor.
+#     """
+#     try:
+#         patients = get_patient_collection()
+#         patient_cursor = patients.find({"doctor_id": current_doctor["id"]}, {"_id": 0})
+#         patient_list = list(patient_cursor)
+#         return JSONResponse(content={"patients": patient_list}, status_code=status.HTTP_200_OK)
 
-    except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to retrieve patients: {str(e)}"
-        )
+#     except Exception as e:
+#         raise HTTPException(
+#             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+#             detail=f"Failed to retrieve patients: {str(e)}"
+#         )
 
 def get_all_patients() -> JSONResponse:
     """
@@ -180,7 +179,7 @@ def get_all_patients() -> JSONResponse:
             detail=f"Failed to retrieve patients: {str(e)}"
         )
 
-def get_patient_by_patient_number(patient_number: int, current_doctor: dict = Depends(get_current_doctor)) -> JSONResponse:
+def get_patient_by_patient_number(patient_number: int) -> JSONResponse:
     """
     Retrieves a patient by their patient number for the currently logged-in doctor.
 
@@ -200,12 +199,12 @@ def get_patient_by_patient_number(patient_number: int, current_doctor: dict = De
 
         # Query the database for the patient with the given number linked to the current doctor
         patient = patients.find_one(
-            {"patient_number": patient_number, "doctor_id": current_doctor["doctor_id"]},
+            {"patient_number": patient_number},
             {"_id": 0}  # Exclude the MongoDB internal _id field
         )
 
         if not patient:
-            logger.warning(f"Patient with patient_number {patient_number} not found for doctor {current_doctor['doctor_id']}")
+            logger.warning(f"Patient with patient_number {patient_number}")
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
                 detail=f"Patient with patient_number {patient_number} not found."
@@ -229,7 +228,7 @@ def get_patient_by_patient_number(patient_number: int, current_doctor: dict = De
             detail=f"An error occurred while retrieving the patient: {str(e)}"
         )
 
-def get_patient_id(patient_number: int, current_doctor: dict) -> str:
+def get_patient_id(patient_number: int) -> str:
     """
     Retrieves the patient_id using the patient_number for the currently logged-in doctor.
 
@@ -251,13 +250,13 @@ def get_patient_id(patient_number: int, current_doctor: dict) -> str:
 
         # Query the database for the patient with the given number linked to the current doctor.
         patient = patients.find_one(
-            {"patient_number": patient_number, "doctor_id": current_doctor["doctor_id"]},
+            {"patient_number": patient_number},
             {"patient_id": 1, "_id": 0}  # Only fetch the patient_id.
         )
 
         if not patient:
             logger.warning(
-                f"Patient with patient_number {patient_number} not found for doctor {current_doctor['doctor_id']}"
+                f"Patient with patient_number {patient_number}"
             )
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
@@ -266,6 +265,10 @@ def get_patient_id(patient_number: int, current_doctor: dict) -> str:
 
         logger.info(f"Patient ID found for patient_number {patient_number}: {patient['patient_id']}")
         return patient["patient_id"]
+
+    except OverflowError:
+        logger.error(f"Patient number {patient_number} exceeds 8-byte limit.")
+        raise HTTPException(status_code=400, detail="Patient number exceeds the allowed range.")
 
     except HTTPException as http_err:
         logger.error(f"Error retrieving patient_id: {http_err.detail}")

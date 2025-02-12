@@ -7,7 +7,6 @@ class Patient(BaseModel):
     """Schema representing a patient in the system (created by doctors)."""
     patient_id: uuid.UUID = Field(..., description="Unique identifier for the patient")
     patient_number: int = Field(..., description="Unique patient number")
-    doctor_id: uuid.UUID = Field(..., description="Unique identifier of the doctor who created the patient profile")
     name: str = Field(..., description="Name of the patient")
     date_of_birth: datetime = Field(..., description="Date of birth of the patient")
     gender: str = Field(..., description="Gender of the patient")

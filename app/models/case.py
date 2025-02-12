@@ -294,45 +294,18 @@ async def get_diagnosis(file,api_key) -> DiagnosisResult:
         data = response.json()
         logger.info("Response JSON from ML API: %s", data)
 
-        """# Validate that the response contains a 'diagnosis' field with a list.
-        if "diagnosis" not in data or not isinstance(data["diagnosis"], list):
-            logger.error("Invalid response format from ML API: %s", data)
-            # TODO: Uncomment the HTTPException below when ML API is ready to handle invalid response formats.
-            # raise HTTPException(
-            #     status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            #     detail="Invalid response format from ML API."
-            # )
-            return DiagnosisResult(Malignant=0.0, Benign=0.0)"""
-
-        
-
-        """# Ensure that the required keys exist in the diagnosis data.
-        if not all(key in diagnosis_data for key in ["Malignant", "Benign"]):
-            logger.error("Incomplete diagnosis data from ML API: %s", diagnosis_data)
-            # TODO: Uncomment the HTTPException below when ML API is ready to handle incomplete diagnosis data.
-            # raise HTTPException(
-            #     status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            #     detail="Incomplete diagnosis data from ML API."
-            # )
-            return DiagnosisResult(Malignant=0.0, Benign=0.0)"""
-
         # Return the diagnosis result by unpacking the diagnosis_data dictionary.
         return data
 
     except HTTPException as http_exc:
-        # TODO: Uncomment the following line when ML API is ready to handle HTTP exceptions.
-        # raise http_exc
-        return DiagnosisResult(Malignant=0.0, Benign=0.0)
+        raise http_exc
 
     except Exception as e:
         logger.exception("Unexpected error during diagnosis: %s", str(e))
-        # TODO: Uncomment the following lines when ML API is ready to handle unexpected errors explicitly.
-        # raise HTTPException(
-        #     status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-        #     detail=f"Unexpected error: {str(e)}"
-        # )
-        return DiagnosisResult(Malignant=0.0, Benign=0.0)
-
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Unexpected error: {str(e)}"
+        )
 
 async def create_case(
     patient_number: int,
@@ -400,7 +373,7 @@ async def create_case(
             )
         
         # Retrieve the patient ID from the patient number.
-        patient_id = get_patient_id(patient_number, current_doctor=current_doctor)
+        patient_id = get_patient_id(patient_number)
         if not patient_id:
             logger.error("Patient with number %s not found.", patient_number)
             raise HTTPException(

@@ -19,6 +19,7 @@ logger = logging.getLogger(__name__)
 @router.post("/new_case", response_model=Case, status_code=status.HTTP_201_CREATED)
 async def create_new_case(
     patient_number: int = Form(...),  # Patient's unique number from form-data.
+    credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
     file: UploadFile = File(...),       # Uploaded image file from form-data.
     current_doctor: dict = Depends(get_current_doctor)  # Authenticated doctor details.
 ):
@@ -65,7 +66,6 @@ def get_doctor_cases(
     Fetches all cases assigned to a specific doctor.
 
     Args:
-        doctor_id (str): The UUID of the doctor.
         credentials (HTTPAuthorizationCredentials): Bearer token for authentication.
         current_doctor (dict): Authenticated user with doctor role.
 
