@@ -32,8 +32,11 @@ async def create_new_case(
 
     Returns:
         Case: The newly created diagnosis case details.
+
     """
-    return await create_case(patient_number, file, current_doctor)
+
+    result = await create_case(patient_number, file, current_doctor)
+    return  result
 
 # -------- Get Case by ID (Accessible by Doctors & SuperUsers) -------- #
 @router.get("/cases/{case_id}", status_code=status.HTTP_200_OK)

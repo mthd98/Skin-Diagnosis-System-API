@@ -13,9 +13,10 @@ from app.schema.case import Case, DiagnosisResult
 from app.schema.images import UploadImage
 from app.models.doctor import get_current_doctor
 from app.models.patient import get_patient_id
+from app.models.api_key import get_api_key
 from app.config.db_init import db_handler
 from dotenv import load_dotenv
-
+import requests 
 logger = logging.getLogger(__name__)
 
 # Load environment variables from .env file
@@ -246,7 +247,8 @@ def generate_unique_filename(extension: str = "jpg") -> str:
     unique_id = uuid.uuid4().hex[:8]  # Short UUID for readability
     return f"image_{timestamp}_{unique_id}.{extension}"
 
-def get_diagnosis(file: UploadFile) -> DiagnosisResult:
+
+async def get_diagnosis(file,api_key) -> DiagnosisResult:
     """
     Sends the uploaded image file to the ML API for diagnosis.
 
@@ -259,34 +261,40 @@ def get_diagnosis(file: UploadFile) -> DiagnosisResult:
     """
     try:
         # Read the image bytes from the uploaded file.
-        file_bytes = file.file.read()
+        file_bytes =  file
+        print("#"*100)
+        print(file_bytes)
         # Generate a unique filename based on the original filename.
-        unique_filename = generate_unique_filename(file.filename)
-        logger.info("Starting diagnosis process for image: %s", file.filename)
+        logger.info("Starting diagnosis process for image: %s", "image")
+
+        # Access Token for ML API
+        headers = {"access_token": str(api_key)}
 
         # Prepare the file payload for the API request.
-        files = {"file": (unique_filename, file_bytes, "image/jpeg")}
-        logger.debug("Prepared image file for API request: %s", unique_filename)
+        files = {"file":file_bytes}
+        logger.debug("Prepared image file for API request: %s", "image")
+
 
         # Send the POST request to the ML API.
-        response = requests.post(ML_API_URL, files=files, timeout=5)
+        response = requests.post(ML_API_URL, files=files, timeout=5,headers=headers)
+        print("#"*100)
+        print(response.json())
         logger.info("Received response from ML API with status code: %s", response.status_code)
 
         # Check for API errors: if status code is not 200, for now return default diagnosis.
         if response.status_code != 200:
             logger.warning("ML API returned non-200 status code: %s", response.status_code)
             # TODO: Uncomment the HTTPException below when ML API is ready to handle errors explicitly.
-            # raise HTTPException(
-            #     status_code=response.status_code,
-            #     detail=f"ML API error: {response.text}"
-            # )
-            return DiagnosisResult(Malignant=0.0, Benign=0.0)
+            raise HTTPException(
+                 status_code=response.status_code,
+                 detail=f"ML API error: {response.text}"
+             )
 
         # Parse the JSON response from the ML API.
         data = response.json()
-        logger.debug("Response JSON from ML API: %s", data)
+        logger.info("Response JSON from ML API: %s", data)
 
-        # Validate that the response contains a 'diagnosis' field with a list.
+        """# Validate that the response contains a 'diagnosis' field with a list.
         if "diagnosis" not in data or not isinstance(data["diagnosis"], list):
             logger.error("Invalid response format from ML API: %s", data)
             # TODO: Uncomment the HTTPException below when ML API is ready to handle invalid response formats.
@@ -294,13 +302,11 @@ def get_diagnosis(file: UploadFile) -> DiagnosisResult:
             #     status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             #     detail="Invalid response format from ML API."
             # )
-            return DiagnosisResult(Malignant=0.0, Benign=0.0)
+            return DiagnosisResult(Malignant=0.0, Benign=0.0)"""
 
-        # Extract the first diagnosis result from the list.
-        diagnosis_data = data["diagnosis"][0]
-        logger.debug("Extracted diagnosis data: %s", diagnosis_data)
+        
 
-        # Ensure that the required keys exist in the diagnosis data.
+        """# Ensure that the required keys exist in the diagnosis data.
         if not all(key in diagnosis_data for key in ["Malignant", "Benign"]):
             logger.error("Incomplete diagnosis data from ML API: %s", diagnosis_data)
             # TODO: Uncomment the HTTPException below when ML API is ready to handle incomplete diagnosis data.
@@ -308,11 +314,10 @@ def get_diagnosis(file: UploadFile) -> DiagnosisResult:
             #     status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             #     detail="Incomplete diagnosis data from ML API."
             # )
-            return DiagnosisResult(Malignant=0.0, Benign=0.0)
+            return DiagnosisResult(Malignant=0.0, Benign=0.0)"""
 
-        logger.info("Diagnosis process completed successfully for image: %s", file.filename)
         # Return the diagnosis result by unpacking the diagnosis_data dictionary.
-        return DiagnosisResult(**diagnosis_data)
+        return data
 
     except HTTPException as http_exc:
         # TODO: Uncomment the following line when ML API is ready to handle HTTP exceptions.
@@ -372,6 +377,7 @@ async def create_case(
         
         # Read the file bytes asynchronously.
         image_bytes = await file.read()
+        
         logger.info("File read successfully: %s, size: %d bytes", file.filename, len(image_bytes))
         
         # Generate a unique filename while preserving the original extension.
@@ -383,6 +389,9 @@ async def create_case(
         
         # Validate current doctor credentials.
         doctor_id = current_doctor.get("doctor_id")
+        doctor_api_key = get_api_key(doctor_id)
+        print("#"*100)
+        print(doctor_api_key)
         if not doctor_id:
             logger.error("Doctor ID missing in provided current_doctor data.")
             raise HTTPException(
@@ -404,7 +413,7 @@ async def create_case(
         logger.info("Image uploaded successfully to GridFS with ID: %s", image_id)
         
         # Obtain the diagnosis result from the ML API.
-        diagnosis_result = get_diagnosis(file)
+        diagnosis_result = await get_diagnosis(image_bytes,doctor_api_key)
         diagnosis = jsonable_encoder(diagnosis_result)
         logger.info("Diagnosis obtained: %s", diagnosis)
         
@@ -422,6 +431,7 @@ async def create_case(
         # Insert the new case into the MongoDB collection.
         cases = get_case_collection()
         result = cases.insert_one(case_data)
+        
         if not result.acknowledged:
             logger.error("Database insert for case not acknowledged.")
             raise HTTPException(

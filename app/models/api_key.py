@@ -2,7 +2,7 @@ import uuid
 import secrets
 import logging
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timezone,timedelta
 from dotenv import load_dotenv
 from fastapi.responses import JSONResponse
 from pymongo.collection import Collection
@@ -60,6 +60,7 @@ def get_api_key(doctor_id: str) -> str:
         api_keys = get_api_key_collection()
         
         api_key = api_keys.find_one({"doctor_id": doctor_id},{"_id": 0})
+        api_key = api_key["api_key"]
 
         logger.info(f"Successfully retrieved API key for doctor_id: {doctor_id}")
         logger.info(f"Api info:{api_key}")
@@ -102,14 +103,16 @@ def allocate_api_key(doctor_id: str) -> str:
         if existing_api_key:
             logger.warning("API key already exists for doctor ID: %s", doctor_id)
             return existing_api_key["api_key"]
-
+        date = datetime.now()
         # Prepare the API key data
         api_key_data = {
             "api_key_id": str(uuid.uuid4()),
             "doctor_id": doctor_id,
             "api_key": api_key,
-            "created_at": datetime.now(timezone.utc),
-            "usage": 0  # Track API key usage
+            "created_at":date.strftime("%Y-%m-%d %H:%M:%S") ,
+            "expired_date": (date + timedelta(days=30) ).strftime("%Y-%m-%d %H:%M:%S"),
+            "usage": 1000
+
         }
 
         # Insert the API key record into the API key collection

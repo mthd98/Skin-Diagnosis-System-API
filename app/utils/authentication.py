@@ -14,7 +14,7 @@ load_dotenv()
 # Use environment variables
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")
-ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 30))
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 10000))
 
 # Check that necessary environment variables are set
 if not SECRET_KEY or not ALGORITHM:

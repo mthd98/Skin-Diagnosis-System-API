@@ -2723,3 +2723,1372 @@ case_id
 2025-02-10 14:07:48,158 - app.middleware.authentication - INFO - Skipping authentication for public route: /docs
 2025-02-10 14:07:48,621 - app.middleware.authentication - INFO - Skipping authentication for public route: /openapi.json
 2025-02-10 14:10:34,078 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 11:55:57,139 - app.middleware.authentication - INFO - Checking Authorization header for /
+2025-02-12 11:55:57,141 - app.middleware.authentication - WARNING - Missing or invalid Authorization header on /
+2025-02-12 11:55:57,142 - app.middleware.authentication - ERROR - HTTPException on /: Missing or invalid Authorization header
+2025-02-12 11:55:57,621 - app.middleware.authentication - INFO - Checking Authorization header for /favicon.ico
+2025-02-12 11:55:57,621 - app.middleware.authentication - WARNING - Missing or invalid Authorization header on /favicon.ico
+2025-02-12 11:55:57,621 - app.middleware.authentication - ERROR - HTTPException on /favicon.ico: Missing or invalid Authorization header
+2025-02-12 11:56:01,021 - app.middleware.authentication - INFO - Skipping authentication for public route: /docs
+2025-02-12 11:56:01,945 - app.middleware.authentication - INFO - Skipping authentication for public route: /openapi.json
+2025-02-12 11:57:07,206 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/login
+2025-02-12 11:57:07,240 - app.routers.users - INFO - Doctor Sign in input: {'email': 'Test03@test.com', 'password': '@Test123'}
+2025-02-12 11:57:07,240 - app.utils.authentication - INFO - Attempting to authenticate doctor with email: Test03@test.com
+2025-02-12 11:57:07,242 - root - INFO - Getting database: Users
+2025-02-12 11:57:07,242 - root - INFO - Getting collection: Doctors
+2025-02-12 11:57:07,242 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 11:57:07,978 - app.utils.authentication - INFO - JWT access token generated successfully for email: Test03@test.com
+2025-02-12 11:57:58,321 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 11:57:58,321 - app.middleware.authentication - WARNING - Missing or invalid Authorization header on /cases/new_case
+2025-02-12 11:57:58,322 - app.middleware.authentication - ERROR - HTTPException on /cases/new_case: Missing or invalid Authorization header
+2025-02-12 11:58:29,392 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 11:58:29,392 - app.middleware.authentication - WARNING - Missing or invalid Authorization header on /cases/new_case
+2025-02-12 11:58:29,395 - app.middleware.authentication - ERROR - HTTPException on /cases/new_case: Missing or invalid Authorization header
+2025-02-12 12:55:22,167 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 13:13:48,450 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/login
+2025-02-12 13:13:48,490 - app.routers.users - INFO - Doctor Sign in input: {'email': 'Test03@test.com', 'password': '@Test123'}
+2025-02-12 13:13:48,490 - app.utils.authentication - INFO - Attempting to authenticate doctor with email: Test03@test.com
+2025-02-12 13:13:48,492 - root - INFO - Getting database: Users
+2025-02-12 13:13:48,492 - root - INFO - Getting collection: Doctors
+2025-02-12 13:13:48,492 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:13:50,140 - app.utils.authentication - INFO - JWT access token generated successfully for email: Test03@test.com
+2025-02-12 13:26:31,450 - app.middleware.authentication - INFO - Checking Authorization header for /cases/cases/patient/12345
+2025-02-12 13:26:31,453 - app.middleware.authentication - ERROR - HTTPException on /cases/cases/patient/12345: Token has expired
+2025-02-12 13:26:42,129 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/login
+2025-02-12 13:26:42,139 - app.routers.users - INFO - Doctor Sign in input: {'email': 'Test03@test.com', 'password': '@Test123'}
+2025-02-12 13:26:42,142 - app.utils.authentication - INFO - Attempting to authenticate doctor with email: Test03@test.com
+2025-02-12 13:26:42,142 - root - INFO - Getting database: Users
+2025-02-12 13:26:42,143 - root - INFO - Getting collection: Doctors
+2025-02-12 13:26:42,143 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:26:42,753 - app.utils.authentication - INFO - JWT access token generated successfully for email: Test03@test.com
+2025-02-12 13:27:36,080 - app.middleware.authentication - INFO - Checking Authorization header for /users/patient/12345
+2025-02-12 13:27:36,081 - app.middleware.authentication - ERROR - HTTPException on /users/patient/12345: Token has expired
+2025-02-12 13:28:11,463 - app.middleware.authentication - INFO - Checking Authorization header for /users/patient/12345
+2025-02-12 13:28:11,464 - app.middleware.authentication - ERROR - HTTPException on /users/patient/12345: Token has expired
+2025-02-12 13:29:01,507 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-12 13:29:01,508 - app.middleware.authentication - ERROR - HTTPException on /users/patients/12345: Token has expired
+2025-02-12 13:29:43,452 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/login
+2025-02-12 13:29:43,455 - app.routers.users - INFO - Doctor Sign in input: {'email': 'Test03@test.com', 'password': '@Test123'}
+2025-02-12 13:29:43,457 - app.utils.authentication - INFO - Attempting to authenticate doctor with email: Test03@test.com
+2025-02-12 13:29:43,457 - root - INFO - Getting database: Users
+2025-02-12 13:29:43,457 - root - INFO - Getting collection: Doctors
+2025-02-12 13:29:43,457 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:29:43,924 - app.utils.authentication - INFO - JWT access token generated successfully for email: Test03@test.com
+2025-02-12 13:30:05,986 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-12 13:30:05,990 - app.middleware.authentication - ERROR - HTTPException on /users/patients/12345: Token has expired
+2025-02-12 13:30:29,634 - app.middleware.authentication - INFO - Checking Authorization header for /users/register-patient
+2025-02-12 13:30:29,642 - app.middleware.authentication - ERROR - HTTPException on /users/register-patient: Token has expired
+2025-02-12 13:31:09,515 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/login
+2025-02-12 13:31:09,519 - app.routers.users - INFO - Doctor Sign in input: {'email': 'Test03@test.com', 'password': '@Test123'}
+2025-02-12 13:31:09,519 - app.utils.authentication - INFO - Attempting to authenticate doctor with email: Test03@test.com
+2025-02-12 13:31:09,520 - root - INFO - Getting database: Users
+2025-02-12 13:31:09,520 - root - INFO - Getting collection: Doctors
+2025-02-12 13:31:09,520 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:31:10,215 - app.utils.authentication - INFO - JWT access token generated successfully for email: Test03@test.com
+2025-02-12 13:31:10,389 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 13:31:27,842 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-12 13:31:27,843 - app.middleware.authentication - ERROR - HTTPException on /users/patients/12345: Token has expired
+2025-02-12 13:32:31,913 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/register-doctor
+2025-02-12 13:32:31,934 - app.routers.users - INFO - Doctor registration input: {'email': 'test1@test.com', 'name': 'Tester five', 'password': '@Test123'}
+2025-02-12 13:32:31,934 - root - INFO - Getting database: Users
+2025-02-12 13:32:31,934 - root - INFO - Getting collection: Doctors
+2025-02-12 13:32:31,935 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:32:32,048 - app.models.doctor - INFO - Creating doctor profile for email: test1@test.com
+2025-02-12 13:32:32,049 - root - INFO - Getting database: Users
+2025-02-12 13:32:32,050 - root - INFO - Getting collection: Doctors
+2025-02-12 13:32:32,050 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:32:32,695 - root - INFO - Getting database: Users
+2025-02-12 13:32:32,697 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 13:32:32,919 - app.models.api_key - INFO - API key allocated successfully for doctor ID: 25a2b5b8-fbb2-484e-8d87-cc0b63b0f7f6
+2025-02-12 13:32:32,919 - app.models.doctor - INFO - Doctor created successfully with id: 25a2b5b8-fbb2-484e-8d87-cc0b63b0f7f6
+2025-02-12 13:32:32,920 - app.routers.users - INFO - Doctor successfully created.
+2025-02-12 13:35:26,759 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 13:35:46,016 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/register-doctor
+2025-02-12 13:35:46,040 - app.routers.users - INFO - Doctor registration input: {'email': 'testm@test.com', 'name': 'Tester five', 'password': '@Test123'}
+2025-02-12 13:35:46,042 - root - INFO - Getting database: Users
+2025-02-12 13:35:46,042 - root - INFO - Getting collection: Doctors
+2025-02-12 13:35:46,042 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:35:46,155 - app.models.doctor - INFO - Creating doctor profile for email: testm@test.com
+2025-02-12 13:35:46,157 - root - INFO - Getting database: Users
+2025-02-12 13:35:46,158 - root - INFO - Getting collection: Doctors
+2025-02-12 13:35:46,158 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:35:46,850 - root - INFO - Getting database: Users
+2025-02-12 13:35:46,851 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 13:35:46,962 - app.models.api_key - ERROR - Error allocating API key: 'getset_descriptor' object is not callable
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\api_key.py", line 112, in allocate_api_key
+    "expired_date": datetime.now()+ datetime.day(30)
+                                    ^^^^^^^^^^^^^^^^
+TypeError: 'getset_descriptor' object is not callable
+2025-02-12 13:35:46,970 - app.models.doctor - ERROR - An unexpected error occurred while creating doctor: 500: An error occurred while allocating the API key: 'getset_descriptor' object is not callable
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\api_key.py", line 112, in allocate_api_key
+    "expired_date": datetime.now()+ datetime.day(30)
+                                    ^^^^^^^^^^^^^^^^
+TypeError: 'getset_descriptor' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\doctor.py", line 95, in create_doctor
+    api_key = allocate_api_key(doctor_data["doctor_id"])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\api_key.py", line 130, in allocate_api_key
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 500: An error occurred while allocating the API key: 'getset_descriptor' object is not callable
+2025-02-12 13:35:46,973 - app.routers.users - INFO - Doctor successfully created.
+2025-02-12 13:38:09,715 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 13:39:29,791 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/register-doctor
+2025-02-12 13:39:29,808 - app.routers.users - INFO - Doctor registration input: {'email': 'testm@test.com', 'name': 'Tester five', 'password': '@Test123'}
+2025-02-12 13:39:29,810 - root - INFO - Getting database: Users
+2025-02-12 13:39:29,810 - root - INFO - Getting collection: Doctors
+2025-02-12 13:39:29,810 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:39:29,918 - app.routers.users - ERROR - Email is already registered: testm@test.com
+2025-02-12 13:39:29,918 - app.routers.users - ERROR - Error creating doctor: Email is already registered.
+2025-02-12 13:39:30,075 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 13:39:37,148 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/register-doctor
+2025-02-12 13:39:37,165 - app.routers.users - INFO - Doctor registration input: {'email': 'test10@test.com', 'name': 'Tester five', 'password': '@Test123'}
+2025-02-12 13:39:37,166 - root - INFO - Getting database: Users
+2025-02-12 13:39:37,166 - root - INFO - Getting collection: Doctors
+2025-02-12 13:39:37,167 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:39:37,279 - app.models.doctor - INFO - Creating doctor profile for email: test10@test.com
+2025-02-12 13:39:37,280 - root - INFO - Getting database: Users
+2025-02-12 13:39:37,281 - root - INFO - Getting collection: Doctors
+2025-02-12 13:39:37,281 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:39:37,881 - root - INFO - Getting database: Users
+2025-02-12 13:39:37,882 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 13:39:38,123 - app.models.api_key - INFO - API key allocated successfully for doctor ID: 898b6f02-125a-46ad-ab79-9eae6aa1d7b1
+2025-02-12 13:39:38,124 - app.models.doctor - INFO - Doctor created successfully with id: 898b6f02-125a-46ad-ab79-9eae6aa1d7b1
+2025-02-12 13:39:38,125 - app.routers.users - INFO - Doctor successfully created.
+2025-02-12 13:50:05,215 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/register-doctor
+2025-02-12 13:50:05,239 - app.routers.users - INFO - Doctor registration input: {'email': 'test007@test.com', 'name': 'Tester five', 'password': '@Test123'}
+2025-02-12 13:50:05,240 - root - INFO - Getting database: Users
+2025-02-12 13:50:05,240 - root - INFO - Getting collection: Doctors
+2025-02-12 13:50:05,241 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:50:05,363 - app.models.doctor - INFO - Creating doctor profile for email: test007@test.com
+2025-02-12 13:50:05,365 - root - INFO - Getting database: Users
+2025-02-12 13:50:05,365 - root - INFO - Getting collection: Doctors
+2025-02-12 13:50:05,365 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:50:06,033 - root - INFO - Getting database: Users
+2025-02-12 13:50:06,034 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 13:50:06,272 - app.models.api_key - INFO - API key allocated successfully for doctor ID: 9765e239-7cdb-4769-ac63-82021246ee21
+2025-02-12 13:50:06,273 - app.models.doctor - INFO - Doctor created successfully with id: 9765e239-7cdb-4769-ac63-82021246ee21
+2025-02-12 13:50:06,275 - app.routers.users - INFO - Doctor successfully created.
+2025-02-12 13:51:32,380 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 13:51:42,254 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/register-doctor
+2025-02-12 13:51:42,271 - app.routers.users - INFO - Doctor registration input: {'email': 'test001@test.com', 'name': 'Tester five', 'password': '@Test123'}
+2025-02-12 13:51:42,273 - root - INFO - Getting database: Users
+2025-02-12 13:51:42,278 - root - INFO - Getting collection: Doctors
+2025-02-12 13:51:42,279 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:51:42,385 - app.models.doctor - INFO - Creating doctor profile for email: test001@test.com
+2025-02-12 13:51:42,391 - root - INFO - Getting database: Users
+2025-02-12 13:51:42,391 - root - INFO - Getting collection: Doctors
+2025-02-12 13:51:42,391 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:51:43,065 - root - INFO - Getting database: Users
+2025-02-12 13:51:43,066 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 13:51:43,294 - app.models.api_key - INFO - API key allocated successfully for doctor ID: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 13:51:43,295 - app.models.doctor - INFO - Doctor created successfully with id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 13:51:43,295 - app.routers.users - INFO - Doctor successfully created.
+2025-02-12 13:52:13,643 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-12 13:52:13,645 - app.middleware.authentication - ERROR - HTTPException on /users/patients/12345: Token has expired
+2025-02-12 13:52:21,002 - app.middleware.authentication - INFO - Skipping authentication for public route: /users/login
+2025-02-12 13:52:21,006 - app.routers.users - INFO - Doctor Sign in input: {'email': 'Test001@test.com', 'password': '@Test123'}
+2025-02-12 13:52:21,008 - app.utils.authentication - INFO - Attempting to authenticate doctor with email: Test001@test.com
+2025-02-12 13:52:21,008 - root - INFO - Getting database: Users
+2025-02-12 13:52:21,008 - root - INFO - Getting collection: Doctors
+2025-02-12 13:52:21,008 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:52:21,529 - app.utils.authentication - INFO - JWT access token generated successfully for email: Test001@test.com
+2025-02-12 13:52:36,039 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-12 13:52:36,040 - app.middleware.authentication - ERROR - HTTPException on /users/patients/12345: Token has expired
+2025-02-12 13:52:53,261 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-12 13:52:53,263 - app.middleware.authentication - INFO - Valid token received for /users/patients/12345
+2025-02-12 13:52:53,272 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 13:52:53,273 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 13:52:53,274 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 13:52:53,277 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 13:52:53,277 - root - INFO - Getting database: Users
+2025-02-12 13:52:53,280 - root - INFO - Getting collection: Doctors
+2025-02-12 13:52:53,282 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:52:53,395 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 13:52:53,399 - app.models.patient - INFO - Fetching patient with patient_number: 12345
+2025-02-12 13:52:53,399 - root - INFO - Getting database: Users
+2025-02-12 13:52:53,399 - root - INFO - Getting collection: Patients
+2025-02-12 13:52:53,399 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 13:52:53,512 - app.models.patient - WARNING - Patient with patient_number 12345 not found for doctor 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 13:52:53,512 - app.models.patient - ERROR - Error retrieving patient: Patient with patient_number 12345 not found.
+2025-02-12 13:53:04,236 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/12345
+2025-02-12 13:53:04,237 - app.middleware.authentication - INFO - Valid token received for /users/patients/12345
+2025-02-12 13:53:04,239 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 13:53:04,239 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 13:53:04,239 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 13:53:04,239 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 13:53:04,240 - root - INFO - Getting database: Users
+2025-02-12 13:53:04,240 - root - INFO - Getting collection: Doctors
+2025-02-12 13:53:04,240 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:53:04,350 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 13:53:04,353 - app.models.patient - INFO - Fetching patient with patient_number: 12345
+2025-02-12 13:53:04,353 - root - INFO - Getting database: Users
+2025-02-12 13:53:04,355 - root - INFO - Getting collection: Patients
+2025-02-12 13:53:04,355 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 13:53:04,465 - app.models.patient - WARNING - Patient with patient_number 12345 not found for doctor 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 13:53:04,466 - app.models.patient - ERROR - Error retrieving patient: Patient with patient_number 12345 not found.
+2025-02-12 13:54:04,456 - app.middleware.authentication - INFO - Checking Authorization header for /users/register-patient
+2025-02-12 13:54:04,457 - app.middleware.authentication - INFO - Valid token received for /users/register-patient
+2025-02-12 13:54:04,459 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 13:54:04,460 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 13:54:04,460 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 13:54:04,460 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 13:54:04,461 - root - INFO - Getting database: Users
+2025-02-12 13:54:04,461 - root - INFO - Getting collection: Doctors
+2025-02-12 13:54:04,461 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:54:04,569 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 13:54:04,613 - app.models.patient - INFO - Creating patient profile for name: Patient01
+2025-02-12 13:54:04,615 - root - INFO - Getting database: Users
+2025-02-12 13:54:04,615 - root - INFO - Getting collection: Patients
+2025-02-12 13:54:04,615 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 13:54:04,885 - app.models.patient - INFO - Patient created successfully with patient_number: 1
+2025-02-12 13:54:17,211 - app.middleware.authentication - INFO - Checking Authorization header for /users/patients/1
+2025-02-12 13:54:17,212 - app.middleware.authentication - INFO - Valid token received for /users/patients/1
+2025-02-12 13:54:17,213 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 13:54:17,213 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 13:54:17,214 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 13:54:17,214 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 13:54:17,215 - root - INFO - Getting database: Users
+2025-02-12 13:54:17,215 - root - INFO - Getting collection: Doctors
+2025-02-12 13:54:17,215 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:54:17,323 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 13:54:17,325 - app.models.patient - INFO - Fetching patient with patient_number: 1
+2025-02-12 13:54:17,325 - root - INFO - Getting database: Users
+2025-02-12 13:54:17,325 - root - INFO - Getting collection: Patients
+2025-02-12 13:54:17,325 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 13:54:17,435 - app.models.patient - INFO - Patient found: Patient01 (patient_number: 1)
+2025-02-12 13:55:02,819 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 13:55:02,820 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 13:55:02,823 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 13:55:02,823 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 13:55:02,823 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 13:55:02,825 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 13:55:02,825 - root - INFO - Getting database: Users
+2025-02-12 13:55:02,825 - root - INFO - Getting collection: Doctors
+2025-02-12 13:55:02,825 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:55:02,934 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 13:55:02,936 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 13:55:02,937 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 13:55:02,937 - app.models.case - INFO - Generated unique filename: image_20250212135502_7e1c3183.melanoma_10105.jpg
+2025-02-12 13:55:02,937 - root - INFO - Getting database: Users
+2025-02-12 13:55:02,938 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 13:55:03,047 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 13:55:03,048 - app.models.api_key - INFO - Api info:{'api_key_id': '7b510185-9c80-491e-9cff-d9c8ac83a800', 'doctor_id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'api_key': 'ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d', 'created_at': '2025-02-12 13:51:43', 'expired_date': '2025-03-14 13:51:43', 'usage': 1000}
+2025-02-12 13:55:03,048 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 13:55:03,048 - root - INFO - Getting database: Users
+2025-02-12 13:55:03,048 - root - INFO - Getting collection: Patients
+2025-02-12 13:55:03,048 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 13:55:03,160 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 13:55:03,160 - app.models.case - INFO - Starting image upload process
+2025-02-12 13:55:03,162 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 13:55:03,162 - root - INFO - Getting database: Images
+2025-02-12 13:55:03,162 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 13:55:03,662 - app.models.case - INFO - Image uploaded successfully with ID: 67aca83750b39dcd246e10cd
+2025-02-12 13:55:03,662 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67aca83750b39dcd246e10cd
+2025-02-12 13:55:03,663 - app.models.case - INFO - Starting diagnosis process for image: melanoma_10105.jpg
+2025-02-12 13:55:03,814 - app.models.case - INFO - Received response from ML API with status code: 400
+2025-02-12 13:55:03,815 - app.models.case - WARNING - ML API returned non-200 status code: 400
+2025-02-12 13:55:03,817 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 13:55:03,817 - root - INFO - Getting database: Cases
+2025-02-12 13:55:03,818 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 13:55:03,818 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 13:55:03,945 - app.models.case - INFO - Case created successfully with id: 51e01556-78b8-4c8f-b3f9-fe211a5c1d46
+2025-02-12 13:55:39,932 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 13:55:46,980 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 13:55:46,983 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 13:55:46,983 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 13:55:46,983 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 13:55:46,983 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 13:55:46,983 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 13:55:46,983 - root - INFO - Getting database: Users
+2025-02-12 13:55:46,990 - root - INFO - Getting collection: Doctors
+2025-02-12 13:55:46,990 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 13:55:47,098 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 13:55:47,103 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 13:55:47,104 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 13:55:47,106 - app.models.case - INFO - Generated unique filename: image_20250212135547_0422df93.melanoma_10105.jpg
+2025-02-12 13:55:47,107 - root - INFO - Getting database: Users
+2025-02-12 13:55:47,107 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 13:55:47,211 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 13:55:47,222 - app.models.api_key - INFO - Api info:{'api_key_id': '7b510185-9c80-491e-9cff-d9c8ac83a800', 'doctor_id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'api_key': 'ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d', 'created_at': '2025-02-12 13:51:43', 'expired_date': '2025-03-14 13:51:43', 'usage': 1000}
+2025-02-12 13:55:47,225 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 13:55:47,225 - root - INFO - Getting database: Users
+2025-02-12 13:55:47,225 - root - INFO - Getting collection: Patients
+2025-02-12 13:55:47,227 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 13:55:47,344 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 13:55:47,346 - app.models.case - INFO - Starting image upload process
+2025-02-12 13:55:47,346 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 13:55:47,346 - root - INFO - Getting database: Images
+2025-02-12 13:55:47,348 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 13:55:47,801 - app.models.case - INFO - Image uploaded successfully with ID: 67aca8636097aad5abcedd0a
+2025-02-12 13:55:47,801 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67aca8636097aad5abcedd0a
+2025-02-12 13:55:47,801 - app.models.case - INFO - Starting diagnosis process for image: melanoma_10105.jpg
+2025-02-12 13:55:47,960 - app.models.case - INFO - Received response from ML API with status code: 400
+2025-02-12 13:55:47,960 - app.models.case - WARNING - ML API returned non-200 status code: 400
+2025-02-12 13:55:47,961 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 13:55:47,961 - root - INFO - Getting database: Cases
+2025-02-12 13:55:47,961 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 13:55:47,961 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 13:55:48,074 - app.models.case - INFO - Case created successfully with id: 048faedf-ca16-45fc-bef0-27e950e72260
+2025-02-12 13:59:39,015 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:00:41,352 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:02:11,482 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:02:17,827 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:02:17,827 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:02:17,832 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:02:17,832 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:02:17,832 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:02:17,833 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:02:17,833 - root - INFO - Getting database: Users
+2025-02-12 14:02:17,833 - root - INFO - Getting collection: Doctors
+2025-02-12 14:02:17,833 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:02:17,955 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:02:17,957 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:02:17,958 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:02:17,958 - app.models.case - INFO - Generated unique filename: image_20250212140217_9fbf5bd3.melanoma_10105.jpg
+2025-02-12 14:02:17,958 - root - INFO - Getting database: Users
+2025-02-12 14:02:17,958 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:02:18,076 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:02:18,077 - app.models.api_key - INFO - Api info:{'api_key_id': '7b510185-9c80-491e-9cff-d9c8ac83a800', 'doctor_id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'api_key': 'ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d', 'created_at': '2025-02-12 13:51:43', 'expired_date': '2025-03-14 13:51:43', 'usage': 1000}
+2025-02-12 14:02:18,077 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:02:18,077 - root - INFO - Getting database: Users
+2025-02-12 14:02:18,077 - root - INFO - Getting collection: Patients
+2025-02-12 14:02:18,078 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:02:18,195 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:02:18,196 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:02:18,197 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:02:18,197 - root - INFO - Getting database: Images
+2025-02-12 14:02:18,198 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:02:18,706 - app.models.case - INFO - Image uploaded successfully with ID: 67aca9eaf0651580f277ef9a
+2025-02-12 14:02:18,706 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67aca9eaf0651580f277ef9a
+2025-02-12 14:02:18,707 - app.models.case - INFO - Starting diagnosis process for image: melanoma_10105.jpg
+2025-02-12 14:02:18,711 - app.models.case - ERROR - Unexpected error during diagnosis: a bytes-like object is required, not 'coroutine'
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\case.py", line 276, in get_diagnosis
+    response = requests.post(ML_API_URL, files=files, timeout=5,headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\models.py", line 370, in prepare
+    self.prepare_body(data, files, json)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\models.py", line 555, in prepare_body
+    (body, content_type) = self._encode_files(files, data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\models.py", line 201, in _encode_files
+    body, content_type = encode_multipart_formdata(new_fields)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\filepost.py", line 81, in encode_multipart_formdata
+    body.write(data)
+TypeError: a bytes-like object is required, not 'coroutine'
+2025-02-12 14:02:18,753 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 14:02:18,753 - root - INFO - Getting database: Cases
+2025-02-12 14:02:18,753 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:02:18,753 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:02:18,881 - app.models.case - INFO - Case created successfully with id: f846a647-c9e6-4080-a133-517ab67b9d66
+2025-02-12 14:04:17,798 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:04:23,019 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:04:23,019 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:04:23,023 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:04:23,027 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:04:23,028 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:04:23,029 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:04:23,029 - root - INFO - Getting database: Users
+2025-02-12 14:04:23,029 - root - INFO - Getting collection: Doctors
+2025-02-12 14:04:23,029 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:04:23,145 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:04:23,147 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:04:23,148 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:04:23,148 - app.models.case - INFO - Generated unique filename: image_20250212140423_3b0adb82.melanoma_10105.jpg
+2025-02-12 14:04:23,148 - root - INFO - Getting database: Users
+2025-02-12 14:04:23,148 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:04:23,266 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:04:23,266 - app.models.api_key - INFO - Api info:{'api_key_id': '7b510185-9c80-491e-9cff-d9c8ac83a800', 'doctor_id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'api_key': 'ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d', 'created_at': '2025-02-12 13:51:43', 'expired_date': '2025-03-14 13:51:43', 'usage': 1000}
+2025-02-12 14:04:23,266 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:04:23,266 - root - INFO - Getting database: Users
+2025-02-12 14:04:23,268 - root - INFO - Getting collection: Patients
+2025-02-12 14:04:23,268 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:04:23,448 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:04:23,449 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:04:23,449 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:04:23,450 - root - INFO - Getting database: Images
+2025-02-12 14:04:23,450 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:04:23,922 - app.models.case - INFO - Image uploaded successfully with ID: 67acaa67e4304eb5a571b7c9
+2025-02-12 14:04:23,923 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acaa67e4304eb5a571b7c9
+2025-02-12 14:04:23,923 - app.models.case - INFO - Starting diagnosis process for image: melanoma_10105.jpg
+2025-02-12 14:04:23,929 - app.models.case - ERROR - Unexpected error during diagnosis: a bytes-like object is required, not 'coroutine'
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\case.py", line 276, in get_diagnosis
+    response = requests.post(ML_API_URL, files=files, timeout=5,headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\models.py", line 370, in prepare
+    self.prepare_body(data, files, json)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\models.py", line 555, in prepare_body
+    (body, content_type) = self._encode_files(files, data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\models.py", line 201, in _encode_files
+    body, content_type = encode_multipart_formdata(new_fields)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\filepost.py", line 81, in encode_multipart_formdata
+    body.write(data)
+TypeError: a bytes-like object is required, not 'coroutine'
+2025-02-12 14:04:23,937 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 14:04:23,940 - root - INFO - Getting database: Cases
+2025-02-12 14:04:23,940 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:04:23,941 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:04:24,102 - app.models.case - INFO - Case created successfully with id: 472f5adb-3e16-432a-9c90-7b9f164a5274
+2025-02-12 14:05:41,472 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:05:45,297 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:05:45,299 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:05:45,303 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:05:45,303 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:05:45,304 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:05:45,305 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:05:45,305 - root - INFO - Getting database: Users
+2025-02-12 14:05:45,305 - root - INFO - Getting collection: Doctors
+2025-02-12 14:05:45,305 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:05:45,427 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:05:45,429 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:05:45,430 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:05:45,430 - app.models.case - INFO - Generated unique filename: image_20250212140545_852f901c.melanoma_10105.jpg
+2025-02-12 14:05:45,430 - root - INFO - Getting database: Users
+2025-02-12 14:05:45,431 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:05:45,550 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:05:45,550 - app.models.api_key - INFO - Api info:{'api_key_id': '7b510185-9c80-491e-9cff-d9c8ac83a800', 'doctor_id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'api_key': 'ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d', 'created_at': '2025-02-12 13:51:43', 'expired_date': '2025-03-14 13:51:43', 'usage': 1000}
+2025-02-12 14:05:45,555 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:05:45,555 - root - INFO - Getting database: Users
+2025-02-12 14:05:45,555 - root - INFO - Getting collection: Patients
+2025-02-12 14:05:45,555 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:05:45,675 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:05:45,675 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:05:45,677 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:05:45,677 - root - INFO - Getting database: Images
+2025-02-12 14:05:45,677 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:05:46,175 - app.models.case - INFO - Image uploaded successfully with ID: 67acaab9f852f43f29ac52cc
+2025-02-12 14:05:46,175 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acaab9f852f43f29ac52cc
+2025-02-12 14:05:46,181 - app.models.case - INFO - Starting diagnosis process for image: melanoma_10105.jpg
+2025-02-12 14:05:46,186 - app.models.case - ERROR - Unexpected error during diagnosis: a bytes-like object is required, not 'coroutine'
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\case.py", line 276, in get_diagnosis
+    response = requests.post(ML_API_URL, files=files, timeout=5,headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\models.py", line 370, in prepare
+    self.prepare_body(data, files, json)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\models.py", line 555, in prepare_body
+    (body, content_type) = self._encode_files(files, data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\models.py", line 201, in _encode_files
+    body, content_type = encode_multipart_formdata(new_fields)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\filepost.py", line 81, in encode_multipart_formdata
+    body.write(data)
+TypeError: a bytes-like object is required, not 'coroutine'
+2025-02-12 14:05:46,202 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 14:05:46,203 - root - INFO - Getting database: Cases
+2025-02-12 14:05:46,203 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:05:46,204 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:05:46,336 - app.models.case - INFO - Case created successfully with id: 4fca574e-dd0e-4f14-8d6b-02f4ee2a5450
+2025-02-12 14:08:42,389 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:08:51,812 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:08:51,816 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:08:51,816 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:08:51,826 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:08:51,828 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:08:51,828 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:08:51,829 - root - INFO - Getting database: Users
+2025-02-12 14:08:51,829 - root - INFO - Getting collection: Doctors
+2025-02-12 14:08:51,830 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:08:51,953 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:08:51,957 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:08:51,957 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:08:51,957 - app.models.case - INFO - Generated unique filename: image_20250212140851_848cfecf.melanoma_10105.jpg
+2025-02-12 14:08:51,957 - root - INFO - Getting database: Users
+2025-02-12 14:08:51,958 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:08:52,074 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:08:52,074 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:08:52,074 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:08:52,080 - root - INFO - Getting database: Users
+2025-02-12 14:08:52,080 - root - INFO - Getting collection: Patients
+2025-02-12 14:08:52,080 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:08:52,228 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:08:52,228 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:08:52,228 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:08:52,228 - root - INFO - Getting database: Images
+2025-02-12 14:08:52,228 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:08:52,732 - app.models.case - INFO - Image uploaded successfully with ID: 67acab742d36d47836c69ae7
+2025-02-12 14:08:52,734 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acab742d36d47836c69ae7
+2025-02-12 14:08:52,734 - app.models.case - INFO - Starting diagnosis process for image: melanoma_10105.jpg
+2025-02-12 14:08:52,736 - app.models.case - ERROR - Unexpected error during diagnosis: a bytes-like object is required, not 'coroutine'
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\case.py", line 276, in get_diagnosis
+    response = requests.post(ML_API_URL, files=files, timeout=5,headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\models.py", line 370, in prepare
+    self.prepare_body(data, files, json)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\models.py", line 555, in prepare_body
+    (body, content_type) = self._encode_files(files, data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\models.py", line 201, in _encode_files
+    body, content_type = encode_multipart_formdata(new_fields)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\filepost.py", line 81, in encode_multipart_formdata
+    body.write(data)
+TypeError: a bytes-like object is required, not 'coroutine'
+2025-02-12 14:08:52,743 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 14:08:52,743 - root - INFO - Getting database: Cases
+2025-02-12 14:08:52,744 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:08:52,744 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:08:52,877 - app.models.case - INFO - Case created successfully with id: 72073bb8-22b0-4a4f-9ad3-c69b497a2ade
+2025-02-12 14:10:45,633 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:10:52,536 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:10:52,537 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:10:52,542 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:10:52,542 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:10:52,542 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:10:52,542 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:10:52,542 - root - INFO - Getting database: Users
+2025-02-12 14:10:52,543 - root - INFO - Getting collection: Doctors
+2025-02-12 14:10:52,543 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:10:52,665 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:10:52,667 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:10:52,667 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:10:52,668 - app.models.case - INFO - Generated unique filename: image_20250212141052_5c5963d9.melanoma_10105.jpg
+2025-02-12 14:10:52,668 - root - INFO - Getting database: Users
+2025-02-12 14:10:52,668 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:10:52,791 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:10:52,792 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:10:52,793 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:10:52,794 - root - INFO - Getting database: Users
+2025-02-12 14:10:52,795 - root - INFO - Getting collection: Patients
+2025-02-12 14:10:52,797 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:10:52,922 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:10:52,923 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:10:52,923 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:10:52,925 - root - INFO - Getting database: Images
+2025-02-12 14:10:52,926 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:10:53,433 - app.models.case - INFO - Image uploaded successfully with ID: 67acabecbb17e7c3f183e1f2
+2025-02-12 14:10:53,433 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acabecbb17e7c3f183e1f2
+2025-02-12 14:10:53,433 - app.models.case - INFO - Starting diagnosis process for image: melanoma_10105.jpg
+2025-02-12 14:10:53,612 - app.models.case - INFO - Received response from ML API with status code: 500
+2025-02-12 14:10:53,612 - app.models.case - WARNING - ML API returned non-200 status code: 500
+2025-02-12 14:10:53,614 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 14:10:53,615 - root - INFO - Getting database: Cases
+2025-02-12 14:10:53,616 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:10:53,617 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:10:53,754 - app.models.case - INFO - Case created successfully with id: 4e35879d-9af8-44d7-b048-b08969445adb
+2025-02-12 14:12:00,403 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:12:00,404 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:12:00,406 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:12:00,406 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:12:00,406 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:12:00,408 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:12:00,408 - root - INFO - Getting database: Users
+2025-02-12 14:12:00,408 - root - INFO - Getting collection: Doctors
+2025-02-12 14:12:00,408 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:12:00,529 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:12:00,530 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:12:00,530 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:12:00,531 - app.models.case - INFO - Generated unique filename: image_20250212141200_dbd3bf7f.melanoma_10105.jpg
+2025-02-12 14:12:00,531 - root - INFO - Getting database: Users
+2025-02-12 14:12:00,531 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:12:00,651 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:12:00,652 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:12:00,653 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:12:00,654 - root - INFO - Getting database: Users
+2025-02-12 14:12:00,654 - root - INFO - Getting collection: Patients
+2025-02-12 14:12:00,657 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:12:00,786 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:12:00,787 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:12:00,787 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:12:00,788 - root - INFO - Getting database: Images
+2025-02-12 14:12:00,791 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:12:01,298 - app.models.case - INFO - Image uploaded successfully with ID: 67acac30bb17e7c3f183e1f5
+2025-02-12 14:12:01,299 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acac30bb17e7c3f183e1f5
+2025-02-12 14:12:01,300 - app.models.case - INFO - Starting diagnosis process for image: melanoma_10105.jpg
+2025-02-12 14:12:01,464 - app.models.case - INFO - Received response from ML API with status code: 500
+2025-02-12 14:12:01,465 - app.models.case - WARNING - ML API returned non-200 status code: 500
+2025-02-12 14:12:01,465 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 14:12:01,466 - root - INFO - Getting database: Cases
+2025-02-12 14:12:01,467 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:12:01,467 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:12:01,594 - app.models.case - INFO - Case created successfully with id: c79f63cb-bdde-4061-83d8-8773e8d9755b
+2025-02-12 14:12:01,833 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:13:41,486 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:14:21,491 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:14:21,491 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:14:21,495 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:14:21,496 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:14:21,496 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:14:21,496 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:14:21,498 - root - INFO - Getting database: Users
+2025-02-12 14:14:21,499 - root - INFO - Getting collection: Doctors
+2025-02-12 14:14:21,499 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:14:21,619 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:14:21,619 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:14:21,621 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:14:21,621 - app.models.case - INFO - Generated unique filename: image_20250212141421_532048ae.melanoma_10105.jpg
+2025-02-12 14:14:21,621 - root - INFO - Getting database: Users
+2025-02-12 14:14:21,622 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:14:21,740 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:14:21,740 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:14:21,740 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:14:21,740 - root - INFO - Getting database: Users
+2025-02-12 14:14:21,740 - root - INFO - Getting collection: Patients
+2025-02-12 14:14:21,740 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:14:21,861 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:14:21,863 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:14:21,863 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:14:21,863 - root - INFO - Getting database: Images
+2025-02-12 14:14:21,863 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:14:22,360 - app.models.case - INFO - Image uploaded successfully with ID: 67acacbdf8572d8adc7a6887
+2025-02-12 14:14:22,364 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acacbdf8572d8adc7a6887
+2025-02-12 14:14:22,364 - app.models.case - INFO - Starting diagnosis process for image: melanoma_10105.jpg
+2025-02-12 14:14:22,524 - app.models.case - INFO - Received response from ML API with status code: 500
+2025-02-12 14:14:22,525 - app.models.case - WARNING - ML API returned non-200 status code: 500
+2025-02-12 14:14:22,526 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 14:14:22,526 - root - INFO - Getting database: Cases
+2025-02-12 14:14:22,526 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:14:22,528 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:14:22,668 - app.models.case - INFO - Case created successfully with id: 6518f674-df63-48bf-894a-f2f76f8bc938
+2025-02-12 14:15:16,156 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:15:21,531 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:15:21,532 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:15:21,534 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:15:21,535 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:15:21,535 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:15:21,536 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:15:21,536 - root - INFO - Getting database: Users
+2025-02-12 14:15:21,536 - root - INFO - Getting collection: Doctors
+2025-02-12 14:15:21,536 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:15:21,657 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:15:21,658 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:15:21,659 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:15:21,659 - app.models.case - INFO - Generated unique filename: image_20250212141521_cacb27f8.melanoma_10105.jpg
+2025-02-12 14:15:21,659 - root - INFO - Getting database: Users
+2025-02-12 14:15:21,659 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:15:21,779 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:15:21,780 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:15:21,780 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:15:21,780 - root - INFO - Getting database: Users
+2025-02-12 14:15:21,780 - root - INFO - Getting collection: Patients
+2025-02-12 14:15:21,781 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:15:21,900 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:15:21,901 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:15:21,902 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:15:21,902 - root - INFO - Getting database: Images
+2025-02-12 14:15:21,907 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:15:22,401 - app.models.case - INFO - Image uploaded successfully with ID: 67acacf9b197607940231631
+2025-02-12 14:15:22,401 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acacf9b197607940231631
+2025-02-12 14:15:22,404 - app.models.case - ERROR - Unexpected error during case creation: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\encoders.py", line 324, in jsonable_encoder
+    data = dict(obj)
+           ^^^^^^^^^
+TypeError: 'coroutine' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\encoders.py", line 329, in jsonable_encoder
+    data = vars(obj)
+           ^^^^^^^^^
+TypeError: vars() argument must have __dict__ attribute
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\case.py", line 417, in create_case
+    diagnosis = jsonable_encoder(diagnosis_result)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\encoders.py", line 332, in jsonable_encoder
+    raise ValueError(errors) from e
+ValueError: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+2025-02-12 14:17:24,311 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:17:30,234 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:17:30,234 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:17:30,238 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:17:30,238 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:17:30,238 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:17:30,238 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:17:30,238 - root - INFO - Getting database: Users
+2025-02-12 14:17:30,242 - root - INFO - Getting collection: Doctors
+2025-02-12 14:17:30,243 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:17:30,364 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:17:30,367 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:17:30,367 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:17:30,368 - app.models.case - INFO - Generated unique filename: image_20250212141730_0fc156fe.melanoma_10105.jpg
+2025-02-12 14:17:30,368 - root - INFO - Getting database: Users
+2025-02-12 14:17:30,368 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:17:30,481 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:17:30,481 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:17:30,481 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:17:30,488 - root - INFO - Getting database: Users
+2025-02-12 14:17:30,488 - root - INFO - Getting collection: Patients
+2025-02-12 14:17:30,488 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:17:30,612 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:17:30,612 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:17:30,612 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:17:30,612 - root - INFO - Getting database: Images
+2025-02-12 14:17:30,612 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:17:31,117 - app.models.case - INFO - Image uploaded successfully with ID: 67acad7a0801bdf387fc339e
+2025-02-12 14:17:31,117 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acad7a0801bdf387fc339e
+2025-02-12 14:17:31,117 - app.models.case - ERROR - Unexpected error during case creation: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\encoders.py", line 324, in jsonable_encoder
+    data = dict(obj)
+           ^^^^^^^^^
+TypeError: 'coroutine' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\encoders.py", line 329, in jsonable_encoder
+    data = vars(obj)
+           ^^^^^^^^^
+TypeError: vars() argument must have __dict__ attribute
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\case.py", line 416, in create_case
+    diagnosis = jsonable_encoder(diagnosis_result)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\encoders.py", line 332, in jsonable_encoder
+    raise ValueError(errors) from e
+ValueError: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+2025-02-12 14:18:50,040 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:18:57,526 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:18:57,526 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:18:57,530 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:18:57,530 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:18:57,530 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:18:57,530 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:18:57,531 - root - INFO - Getting database: Users
+2025-02-12 14:18:57,531 - root - INFO - Getting collection: Doctors
+2025-02-12 14:18:57,531 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:18:57,652 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:18:57,668 - app.middleware.authentication - ERROR - Unexpected error during authentication for /cases/new_case: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': <coroutine object create_case at 0x000001CD9D0B1FC0>}
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\memory.py", line 111, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\memory.py", line 106, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\memory.py", line 124, in receive
+    return receiver.item
+           ^^^^^^^^^^^^^
+AttributeError: 'MemoryObjectItemReceiver' object has no attribute 'item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\middleware\authentication.py", line 40, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': <coroutine object create_case at 0x000001CD9D0B1FC0>}
+
+2025-02-12 14:23:28,464 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:23:34,735 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:23:34,736 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:23:34,739 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:23:34,739 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:23:34,739 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:23:34,740 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:23:34,740 - root - INFO - Getting database: Users
+2025-02-12 14:23:34,740 - root - INFO - Getting collection: Doctors
+2025-02-12 14:23:34,740 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:23:34,859 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:23:34,863 - app.middleware.authentication - ERROR - Unexpected error during authentication for /cases/new_case: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': <coroutine object create_case at 0x000001F04084DE40>}
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\memory.py", line 111, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\memory.py", line 106, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\memory.py", line 124, in receive
+    return receiver.item
+           ^^^^^^^^^^^^^
+AttributeError: 'MemoryObjectItemReceiver' object has no attribute 'item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\middleware\authentication.py", line 40, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': <coroutine object create_case at 0x000001F04084DE40>}
+
+2025-02-12 14:24:44,473 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:24:44,473 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:24:44,477 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:24:44,477 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:24:44,477 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:24:44,477 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:24:44,478 - root - INFO - Getting database: Users
+2025-02-12 14:24:44,478 - root - INFO - Getting collection: Doctors
+2025-02-12 14:24:44,479 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:24:44,599 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:24:44,601 - app.middleware.authentication - ERROR - Unexpected error during authentication for /cases/new_case: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': <coroutine object create_case at 0x000002203D4A1FC0>}
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\memory.py", line 111, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\memory.py", line 106, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\memory.py", line 124, in receive
+    return receiver.item
+           ^^^^^^^^^^^^^
+AttributeError: 'MemoryObjectItemReceiver' object has no attribute 'item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\middleware\authentication.py", line 40, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': <coroutine object create_case at 0x000002203D4A1FC0>}
+
+2025-02-12 14:26:23,289 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:26:30,100 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:26:30,101 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:26:30,106 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:26:30,107 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:26:30,107 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:26:30,107 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:26:30,108 - root - INFO - Getting database: Users
+2025-02-12 14:26:30,109 - root - INFO - Getting collection: Doctors
+2025-02-12 14:26:30,109 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:26:30,232 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:26:30,236 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:26:30,238 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:26:30,239 - app.models.case - INFO - Generated unique filename: image_20250212142630_999e8a64.melanoma_10105.jpg
+2025-02-12 14:26:30,241 - root - INFO - Getting database: Users
+2025-02-12 14:26:30,245 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:26:30,363 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:26:30,364 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:26:30,365 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:26:30,365 - root - INFO - Getting database: Users
+2025-02-12 14:26:30,366 - root - INFO - Getting collection: Patients
+2025-02-12 14:26:30,366 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:26:30,485 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:26:30,487 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:26:30,489 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:26:30,491 - root - INFO - Getting database: Images
+2025-02-12 14:26:30,491 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:26:31,011 - app.models.case - INFO - Image uploaded successfully with ID: 67acaf965dfef52a577f107b
+2025-02-12 14:26:31,012 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acaf965dfef52a577f107b
+2025-02-12 14:26:31,012 - app.models.case - INFO - Starting diagnosis process for image: image
+2025-02-12 14:26:31,217 - app.models.case - INFO - Received response from ML API with status code: 500
+2025-02-12 14:26:31,218 - app.models.case - WARNING - ML API returned non-200 status code: 500
+2025-02-12 14:26:31,219 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 14:26:31,220 - root - INFO - Getting database: Cases
+2025-02-12 14:26:31,220 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:26:31,221 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:26:31,364 - app.models.case - INFO - Case created successfully with id: 3145335d-020f-4d46-a3dc-42b723e0bc3e
+2025-02-12 14:27:33,145 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:27:41,320 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:27:41,322 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:27:41,327 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:27:41,327 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:27:41,327 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:27:41,330 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:27:41,330 - root - INFO - Getting database: Users
+2025-02-12 14:27:41,332 - root - INFO - Getting collection: Doctors
+2025-02-12 14:27:41,332 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:27:41,453 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:27:41,455 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:27:41,455 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:27:41,455 - app.models.case - INFO - Generated unique filename: image_20250212142741_4bd4c68f.melanoma_10105.jpg
+2025-02-12 14:27:41,457 - root - INFO - Getting database: Users
+2025-02-12 14:27:41,457 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:27:41,573 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:27:41,581 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:27:41,582 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:27:41,582 - root - INFO - Getting database: Users
+2025-02-12 14:27:41,584 - root - INFO - Getting collection: Patients
+2025-02-12 14:27:41,585 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:27:41,707 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:27:41,707 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:27:41,709 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:27:41,709 - root - INFO - Getting database: Images
+2025-02-12 14:27:41,709 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:27:42,224 - app.models.case - INFO - Image uploaded successfully with ID: 67acafdd5262d2515018f256
+2025-02-12 14:27:42,226 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acafdd5262d2515018f256
+2025-02-12 14:27:42,233 - app.models.case - ERROR - Unexpected error during diagnosis: object bytes can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\case.py", line 264, in get_diagnosis
+    file_bytes = await file.file.read()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object bytes can't be used in 'await' expression
+2025-02-12 14:27:42,237 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 14:27:42,238 - root - INFO - Getting database: Cases
+2025-02-12 14:27:42,238 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:27:42,239 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:27:42,374 - app.models.case - INFO - Case created successfully with id: 68b7a4f0-4a85-42c5-81d2-0d8e62865d1a
+2025-02-12 14:28:03,784 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:28:09,614 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:28:09,615 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:28:09,618 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:28:09,619 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:28:09,619 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:28:09,619 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:28:09,619 - root - INFO - Getting database: Users
+2025-02-12 14:28:09,620 - root - INFO - Getting collection: Doctors
+2025-02-12 14:28:09,620 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:28:09,741 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:28:09,743 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:28:09,744 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:28:09,744 - app.models.case - INFO - Generated unique filename: image_20250212142809_e0640b12.melanoma_10105.jpg
+2025-02-12 14:28:09,745 - root - INFO - Getting database: Users
+2025-02-12 14:28:09,745 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:28:09,864 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:28:09,866 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:28:09,867 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:28:09,867 - root - INFO - Getting database: Users
+2025-02-12 14:28:09,867 - root - INFO - Getting collection: Patients
+2025-02-12 14:28:09,868 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:28:09,986 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:28:09,987 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:28:09,987 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:28:09,987 - root - INFO - Getting database: Images
+2025-02-12 14:28:09,987 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:28:10,484 - app.models.case - INFO - Image uploaded successfully with ID: 67acaff953546581f2dc9c57
+2025-02-12 14:28:10,485 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acaff953546581f2dc9c57
+2025-02-12 14:28:10,491 - app.models.case - INFO - Starting diagnosis process for image: image
+2025-02-12 14:28:10,653 - app.models.case - INFO - Received response from ML API with status code: 500
+2025-02-12 14:28:10,654 - app.models.case - WARNING - ML API returned non-200 status code: 500
+2025-02-12 14:28:10,657 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 14:28:10,657 - root - INFO - Getting database: Cases
+2025-02-12 14:28:10,660 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:28:10,660 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:28:10,816 - app.models.case - INFO - Case created successfully with id: 987f20b3-decb-4fbd-a576-23d1b36d8648
+2025-02-12 14:29:32,380 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:29:37,081 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:29:37,082 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:29:37,086 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:29:37,086 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:29:37,086 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:29:37,087 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:29:37,087 - root - INFO - Getting database: Users
+2025-02-12 14:29:37,088 - root - INFO - Getting collection: Doctors
+2025-02-12 14:29:37,088 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:29:37,208 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:29:37,210 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:29:37,211 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:29:37,212 - app.models.case - INFO - Generated unique filename: image_20250212142937_e21dc22a.melanoma_10105.jpg
+2025-02-12 14:29:37,212 - root - INFO - Getting database: Users
+2025-02-12 14:29:37,213 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:29:37,331 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:29:37,332 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:29:37,332 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:29:37,333 - root - INFO - Getting database: Users
+2025-02-12 14:29:37,333 - root - INFO - Getting collection: Patients
+2025-02-12 14:29:37,333 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:29:37,460 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:29:37,461 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:29:37,461 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:29:37,462 - root - INFO - Getting database: Images
+2025-02-12 14:29:37,463 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:29:37,969 - app.models.case - INFO - Image uploaded successfully with ID: 67acb051004a7cb02eb20a5f
+2025-02-12 14:29:37,970 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acb051004a7cb02eb20a5f
+2025-02-12 14:29:37,971 - app.models.case - ERROR - Unexpected error during case creation: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\encoders.py", line 324, in jsonable_encoder
+    data = dict(obj)
+           ^^^^^^^^^
+TypeError: 'coroutine' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\encoders.py", line 329, in jsonable_encoder
+    data = vars(obj)
+           ^^^^^^^^^
+TypeError: vars() argument must have __dict__ attribute
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\case.py", line 420, in create_case
+    diagnosis = jsonable_encoder(diagnosis_result)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mentz\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\encoders.py", line 332, in jsonable_encoder
+    raise ValueError(errors) from e
+ValueError: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+2025-02-12 14:30:21,253 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:30:26,690 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:30:26,690 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:30:26,693 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:30:26,693 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:30:26,693 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:30:26,693 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:30:26,693 - root - INFO - Getting database: Users
+2025-02-12 14:30:26,693 - root - INFO - Getting collection: Doctors
+2025-02-12 14:30:26,693 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:30:26,812 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:30:26,814 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:30:26,815 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:30:26,815 - app.models.case - INFO - Generated unique filename: image_20250212143026_221d23b4.melanoma_10105.jpg
+2025-02-12 14:30:26,816 - root - INFO - Getting database: Users
+2025-02-12 14:30:26,816 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:30:26,937 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:30:26,941 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:30:26,942 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:30:26,943 - root - INFO - Getting database: Users
+2025-02-12 14:30:26,943 - root - INFO - Getting collection: Patients
+2025-02-12 14:30:26,944 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:30:27,062 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:30:27,063 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:30:27,063 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:30:27,064 - root - INFO - Getting database: Images
+2025-02-12 14:30:27,065 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:30:27,592 - app.models.case - INFO - Image uploaded successfully with ID: 67acb0831ab526b27ae3cc40
+2025-02-12 14:30:27,594 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acb0831ab526b27ae3cc40
+2025-02-12 14:30:27,608 - app.models.case - INFO - Starting diagnosis process for image: image
+2025-02-12 14:30:28,531 - app.models.case - INFO - Received response from ML API with status code: 200
+2025-02-12 14:30:28,531 - app.models.case - INFO - Response JSON from ML API: {'diagnosis': [{'Malignant': 0.007869601249694824, 'Benign': 0.9921303987503052}], 'time_taken': 0.7459971904754639, 'date': '2025-02-12 14:30:28'}
+2025-02-12 14:30:28,532 - app.models.case - ERROR - Unexpected error during diagnosis: 'bytes' object has no attribute 'filename'
+Traceback (most recent call last):
+  File "C:\Work\Skin diagnosis\Skin-Diagnosis-System-API\app\models\case.py", line 321, in get_diagnosis
+    logger.info("Diagnosis process completed successfully for image: %s", file.filename)
+                                                                          ^^^^^^^^^^^^^
+AttributeError: 'bytes' object has no attribute 'filename'
+2025-02-12 14:30:28,539 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 14:30:28,539 - root - INFO - Getting database: Cases
+2025-02-12 14:30:28,540 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:30:28,540 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:30:28,668 - app.models.case - INFO - Case created successfully with id: be4123b1-ed36-475f-8cc8-2cd800b91f29
+2025-02-12 14:31:21,183 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:31:25,024 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:31:25,026 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:31:25,040 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:31:25,041 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:31:25,042 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:31:25,043 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:31:25,054 - root - INFO - Getting database: Users
+2025-02-12 14:31:25,054 - root - INFO - Getting collection: Doctors
+2025-02-12 14:31:25,057 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:31:25,174 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:31:25,175 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:31:25,175 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:31:25,177 - app.models.case - INFO - Generated unique filename: image_20250212143125_a632d7c2.melanoma_10105.jpg
+2025-02-12 14:31:25,177 - root - INFO - Getting database: Users
+2025-02-12 14:31:25,177 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:31:25,300 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:31:25,302 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:31:25,302 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:31:25,304 - root - INFO - Getting database: Users
+2025-02-12 14:31:25,304 - root - INFO - Getting collection: Patients
+2025-02-12 14:31:25,304 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:31:25,439 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:31:25,441 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:31:25,442 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:31:25,442 - root - INFO - Getting database: Images
+2025-02-12 14:31:25,443 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:31:25,939 - app.models.case - INFO - Image uploaded successfully with ID: 67acb0bd5a3bca4274a9f678
+2025-02-12 14:31:25,939 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acb0bd5a3bca4274a9f678
+2025-02-12 14:31:25,951 - app.models.case - INFO - Starting diagnosis process for image: image
+2025-02-12 14:31:26,423 - app.models.case - INFO - Received response from ML API with status code: 200
+2025-02-12 14:31:26,424 - app.models.case - INFO - Response JSON from ML API: {'diagnosis': [{'Malignant': 0.007869601249694824, 'Benign': 0.9921303987503052}], 'time_taken': 0.310870885848999, 'date': '2025-02-12 14:31:26'}
+2025-02-12 14:31:26,424 - app.models.case - INFO - Diagnosis obtained: {'malignant': None, 'benign': None}
+2025-02-12 14:31:26,425 - root - INFO - Getting database: Cases
+2025-02-12 14:31:26,425 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:31:26,425 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:31:26,551 - app.models.case - INFO - Case created successfully with id: 196a05c8-a25f-4d69-a90b-9d2b0f164240
+2025-02-12 14:32:18,815 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:32:22,960 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:32:22,960 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:32:22,966 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:32:22,967 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:32:22,967 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:32:22,967 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:32:22,971 - root - INFO - Getting database: Users
+2025-02-12 14:32:22,972 - root - INFO - Getting collection: Doctors
+2025-02-12 14:32:22,977 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:32:23,166 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:32:23,167 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:32:23,167 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:32:23,167 - app.models.case - INFO - Generated unique filename: image_20250212143223_9e338255.melanoma_10105.jpg
+2025-02-12 14:32:23,169 - root - INFO - Getting database: Users
+2025-02-12 14:32:23,170 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:32:23,375 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:32:23,375 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:32:23,375 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:32:23,375 - root - INFO - Getting database: Users
+2025-02-12 14:32:23,375 - root - INFO - Getting collection: Patients
+2025-02-12 14:32:23,377 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:32:23,606 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:32:23,606 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:32:23,606 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:32:23,607 - root - INFO - Getting database: Images
+2025-02-12 14:32:23,607 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:32:24,538 - app.models.case - INFO - Image uploaded successfully with ID: 67acb0f79c348151f4ad84e8
+2025-02-12 14:32:24,538 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acb0f79c348151f4ad84e8
+2025-02-12 14:32:24,540 - app.models.case - INFO - Starting diagnosis process for image: image
+2025-02-12 14:32:25,002 - app.models.case - INFO - Received response from ML API with status code: 200
+2025-02-12 14:32:25,002 - app.models.case - INFO - Response JSON from ML API: {'diagnosis': [{'Malignant': 0.007869601249694824, 'Benign': 0.9921303987503052}], 'time_taken': 0.22344112396240234, 'date': '2025-02-12 14:32:25'}
+2025-02-12 14:32:25,004 - app.models.case - INFO - Diagnosis obtained: {'diagnosis': [{'Malignant': 0.007869601249694824, 'Benign': 0.9921303987503052}], 'time_taken': 0.22344112396240234, 'date': '2025-02-12 14:32:25'}
+2025-02-12 14:32:25,004 - root - INFO - Getting database: Cases
+2025-02-12 14:32:25,005 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:32:25,005 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:32:25,127 - app.models.case - INFO - Case created successfully with id: b88764c8-8dc5-44d8-9bd0-734af85cd155
+2025-02-12 14:34:35,040 - app.main - INFO - Application shutdown: Disconnected from MongoDB
+2025-02-12 14:34:48,563 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:34:48,564 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:34:48,569 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:34:48,570 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:34:48,570 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:34:48,571 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:34:48,571 - root - INFO - Getting database: Users
+2025-02-12 14:34:48,571 - root - INFO - Getting collection: Doctors
+2025-02-12 14:34:48,573 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:34:48,691 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:34:48,693 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:34:48,694 - app.models.case - INFO - File read successfully: melanoma_10105.jpg, size: 10076 bytes
+2025-02-12 14:34:48,694 - app.models.case - INFO - Generated unique filename: image_20250212143448_caa03c6c.melanoma_10105.jpg
+2025-02-12 14:34:48,694 - root - INFO - Getting database: Users
+2025-02-12 14:34:48,695 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:34:48,814 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:34:48,815 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:34:48,816 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:34:48,817 - root - INFO - Getting database: Users
+2025-02-12 14:34:48,818 - root - INFO - Getting collection: Patients
+2025-02-12 14:34:48,821 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:34:48,944 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:34:48,946 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:34:48,949 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:34:48,949 - root - INFO - Getting database: Images
+2025-02-12 14:34:48,950 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:34:49,461 - app.models.case - INFO - Image uploaded successfully with ID: 67acb188048087a9cef284bb
+2025-02-12 14:34:49,462 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acb188048087a9cef284bb
+2025-02-12 14:34:49,470 - app.models.case - INFO - Starting diagnosis process for image: image
+2025-02-12 14:34:49,837 - app.models.case - INFO - Received response from ML API with status code: 200
+2025-02-12 14:34:49,837 - app.models.case - INFO - Response JSON from ML API: {'diagnosis': [{'Malignant': 0.007869601249694824, 'Benign': 0.9921303987503052}], 'time_taken': 0.21734046936035156, 'date': '2025-02-12 14:34:49'}
+2025-02-12 14:34:49,838 - app.models.case - INFO - Diagnosis obtained: {'diagnosis': [{'Malignant': 0.007869601249694824, 'Benign': 0.9921303987503052}], 'time_taken': 0.21734046936035156, 'date': '2025-02-12 14:34:49'}
+2025-02-12 14:34:49,838 - root - INFO - Getting database: Cases
+2025-02-12 14:34:49,838 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:34:49,839 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:34:49,964 - app.models.case - INFO - Case created successfully with id: 3c16e660-01dc-4c86-b847-a024dde1795c
+2025-02-12 14:35:06,269 - app.middleware.authentication - INFO - Checking Authorization header for /cases/new_case
+2025-02-12 14:35:06,275 - app.middleware.authentication - INFO - Valid token received for /cases/new_case
+2025-02-12 14:35:06,282 - app.models.doctor - INFO - Checking for Authorization header in request.
+2025-02-12 14:35:06,282 - app.models.doctor - INFO - Auth Header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhZDRmZmU2LTNiZmEtNGU1Yy05NWNkLTM4MzFmYTE2NjVmMCIsImVtYWlsIjoidGVzdDAwMUB0ZXN0LmNvbSIsImV4cCI6MTczOTM3MTk0MX0.tEbUJtWsx2Eo-DS5KNTvVZLoXDp5DoM4JpatF_nLTzU
+2025-02-12 14:35:06,283 - app.models.doctor - INFO - Authorization header found. Token extracted (not logging token for security).
+2025-02-12 14:35:06,284 - app.models.doctor - INFO - JWT token verified successfully. Decoded data: {'id': '3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0', 'email': 'test001@test.com', 'exp': 1739371941}
+2025-02-12 14:35:06,284 - root - INFO - Getting database: Users
+2025-02-12 14:35:06,284 - root - INFO - Getting collection: Doctors
+2025-02-12 14:35:06,285 - root - INFO - Got doctor collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Doctors')
+2025-02-12 14:35:06,407 - app.models.doctor - INFO - Doctor with id 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0 successfully authenticated.
+2025-02-12 14:35:06,409 - app.models.case - INFO - Received request to create new case for patient_number: 1
+2025-02-12 14:35:06,409 - app.models.case - INFO - File read successfully: ISIC_0000000.jpg, size: 49982 bytes
+2025-02-12 14:35:06,410 - app.models.case - INFO - Generated unique filename: image_20250212143506_84eb1e34.ISIC_0000000.jpg
+2025-02-12 14:35:06,411 - root - INFO - Getting database: Users
+2025-02-12 14:35:06,416 - root - INFO - Getting collection: Users-API-Keys
+2025-02-12 14:35:06,552 - app.models.api_key - INFO - Successfully retrieved API key for doctor_id: 3ad4ffe6-3bfa-4e5c-95cd-3831fa1665f0
+2025-02-12 14:35:06,558 - app.models.api_key - INFO - Api info:ecbcf19b3880657246bccf74536e6b462db28c5ac75a74cf2c10f1328f5f865d
+2025-02-12 14:35:06,560 - app.models.patient - INFO - Fetching patient_id for patient_number: 1
+2025-02-12 14:35:06,560 - root - INFO - Getting database: Users
+2025-02-12 14:35:06,560 - root - INFO - Getting collection: Patients
+2025-02-12 14:35:06,560 - root - INFO - Got patient collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Users'), 'Patients')
+2025-02-12 14:35:06,680 - app.models.patient - INFO - Patient ID found for patient_number 1: 2a9a69aa-b6b7-4c42-a22e-3e0991df691d
+2025-02-12 14:35:06,681 - app.models.case - INFO - Starting image upload process
+2025-02-12 14:35:06,681 - app.models.case - INFO - Attempting to connect to the 'Images' database.
+2025-02-12 14:35:06,681 - root - INFO - Getting database: Images
+2025-02-12 14:35:06,682 - app.models.case - INFO - Successfully connected to 'Images' database. Initializing GridFS.
+2025-02-12 14:35:07,301 - app.models.case - INFO - Image uploaded successfully with ID: 67acb19a048087a9cef284be
+2025-02-12 14:35:07,301 - app.models.case - INFO - Image uploaded successfully to GridFS with ID: 67acb19a048087a9cef284be
+2025-02-12 14:35:07,345 - app.models.case - INFO - Starting diagnosis process for image: image
+2025-02-12 14:35:07,778 - app.models.case - INFO - Received response from ML API with status code: 200
+2025-02-12 14:35:07,778 - app.models.case - INFO - Response JSON from ML API: {'diagnosis': [{'Malignant': 0.8864263892173767, 'Benign': 0.11357361078262329}], 'time_taken': 0.19698500633239746, 'date': '2025-02-12 14:35:07'}
+2025-02-12 14:35:07,779 - app.models.case - INFO - Diagnosis obtained: {'diagnosis': [{'Malignant': 0.8864263892173767, 'Benign': 0.11357361078262329}], 'time_taken': 0.19698500633239746, 'date': '2025-02-12 14:35:07'}
+2025-02-12 14:35:07,780 - root - INFO - Getting database: Cases
+2025-02-12 14:35:07,780 - root - INFO - Getting collection: daec48a0-210b-4a76-9121-f6f65a13159d
+2025-02-12 14:35:07,780 - root - INFO - Got cases collection: Collection(Database(MongoClient(host=['cluster0-shard-00-00.sst2o.mongodb.net:27017', 'cluster0-shard-00-02.sst2o.mongodb.net:27017', 'cluster0-shard-00-01.sst2o.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', appname='Cluster0', authsource='admin', replicaset='atlas-13ig7t-shard-0', tls=True, serverselectiontimeoutms=5000), 'Cases'), 'daec48a0-210b-4a76-9121-f6f65a13159d')
+2025-02-12 14:35:07,903 - app.models.case - INFO - Case created successfully with id: 1edfabe4-7994-4dc9-bd12-fc75c1d298d3
