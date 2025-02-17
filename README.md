@@ -56,7 +56,7 @@ To containerize the application, build the Docker image using:
 ### Running the Docker Container
 Run the containerized application using:
 ```sh
- docker run -d -p 5000:5000 --name skin-diagnosis-api-container skin-diagnosis-api
+ docker run -d -p 8080:8080 --name skin-diagnosis-api-container skin-diagnosis-api
 ```
 This will start the application and expose it on port 8000.
 
