@@ -1,0 +1,92 @@
+{
+    "responses": [
+      {
+        "name": "Doctor Registration Success",
+        "status": 201,
+        "body": {
+          "message": "Doctor registered successfully",
+          "doctor_id": "12345"
+        },
+        "description": "Response returned when a doctor is successfully registered."
+      },
+      {
+        "name": "Doctor Login Success",
+        "status": 200,
+        "body": {
+          "access_token": "eyJhbGciOiJIUzI1...",
+          "token_type": "Bearer"
+        },
+        "description": "Response returned when a doctor successfully logs in."
+      },
+      {
+        "name": "Patient Registration Success",
+        "status": 201,
+        "body": {
+          "message": "Patient registered successfully",
+          "patient_number": 12345
+        },
+        "description": "Response returned when a new patient is registered by a doctor."
+      },
+      {
+        "name": "Get All Doctors Success",
+        "status": 200,
+        "body": {
+          "doctors": [
+            {"id": "12345", "name": "Dr. John Doe", "email": "johndoe@example.com"}
+          ]
+        },
+        "description": "Response returned when fetching the list of all doctors."
+      },
+      {
+        "name": "Get Patient Success",
+        "status": 200,
+        "body": {
+          "patient_number": 12345,
+          "name": "Jane Doe",
+          "age": 30,
+          "gender": "Female"
+        },
+        "description": "Response returned when fetching a patient by their patient number."
+      },
+      {
+        "name": "Create New Case Success",
+        "status": 201,
+        "body": {
+          "message": "Case created successfully",
+          "case_id": "67890"
+        },
+        "description": "Response returned when a new diagnosis case is created."
+      },
+      {
+        "name": "Get Case Success",
+        "status": 200,
+        "body": {
+          "case_id": "67890",
+          "patient_number": 12345,
+          "case_notes": ["Initial diagnosis: Possible skin infection"],
+          "image_url": "https://example.com/case_image.jpg"
+        },
+        "description": "Response returned when fetching details of a specific case by ID."
+      },
+      {
+        "name": "Get Doctor Cases Success",
+        "status": 200,
+        "body": {
+          "cases": [
+            {"case_id": "67890", "patient_number": 12345, "diagnosis": "Possible skin infection"}
+          ]
+        },
+        "description": "Response returned when fetching all cases assigned to a doctor."
+      },
+      {
+        "name": "Get Patient Cases Success",
+        "status": 200,
+        "body": {
+          "cases": [
+            {"case_id": "67890", "diagnosis": "Possible skin infection"}
+          ]
+        },
+        "description": "Response returned when fetching all cases associated with a specific patient."
+      }
+    ]
+  }

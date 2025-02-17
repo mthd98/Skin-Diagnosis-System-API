@@ -1,13 +1,10 @@
-import os
 import logging
 import logging.config
-from dotenv import load_dotenv
 
-# Load environment variables from the .env file
-load_dotenv()
+from app.config import config
 
 # Read the logging flag from the environment (defaulting to enabled)
-LOGGING_ENABLED = os.getenv("LOGGING_ENABLED", "true").lower() in ["true", "1", "yes"]
+LOGGING_ENABLED = config.is_logging_enabled()
 
 # Define the global logging configuration
 LOGGING_CONFIG = {
