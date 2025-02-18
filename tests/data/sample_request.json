@@ -1,0 +1,112 @@
+{
+    "requests": [
+      {
+        "name": "Doctor Registration",
+        "endpoint": "/register-doctor",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "name": "Dr. John Doe",
+          "email": "johndoe@example.com",
+          "password": "securepassword"
+        },
+        "description": "Registers a new doctor in the system."
+      },
+      {
+        "name": "Doctor Login",
+        "endpoint": "/login",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "email": "johndoe@example.com",
+          "password": "securepassword"
+        },
+        "description": "Authenticates a doctor and returns an access token."
+      },
+      {
+        "name": "Register Patient",
+        "endpoint": "/register-patient",
+        "method": "POST",
+        "headers": {
+          "Authorization": "Bearer <token>",
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "name": "Jane Doe",
+          "patient_number": 12345,
+          "age": 30,
+          "gender": "Female"
+        },
+        "description": "Registers a new patient under the care of the logged-in doctor."
+      },
+      {
+        "name": "Get All Doctors",
+        "endpoint": "/doctors",
+        "method": "GET",
+        "headers": {
+          "Authorization": "Bearer <token>"
+        },
+        "body": {},
+        "description": "Retrieves a list of all registered doctors (admin access required)."
+      },
+      {
+        "name": "Get Patient by Patient Number",
+        "endpoint": "/patients/{patient_number}",
+        "method": "GET",
+        "headers": {
+          "Authorization": "Bearer <token>"
+        },
+        "body": {},
+        "description": "Fetches patient details using the patient number."
+      },
+      {
+        "name": "Create New Case",
+        "endpoint": "/new_case",
+        "method": "POST",
+        "headers": {
+          "Authorization": "Bearer <token>"
+        },
+        "body": {
+          "patient_number": 12345,
+          "case_notes": ["Initial diagnosis: Possible skin infection"],
+          "file": "image.jpg"
+        },
+        "description": "Creates a new medical case for the specified patient, including an uploaded image."
+      },
+      {
+        "name": "Get Case by ID",
+        "endpoint": "/cases/{case_id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": "Bearer <token>"
+        },
+        "body": {},
+        "description": "Retrieves details of a specific case by case ID."
+      },
+      {
+        "name": "Get All Cases for Doctor",
+        "endpoint": "/get_cases",
+        "method": "GET",
+        "headers": {
+          "Authorization": "Bearer <token>"
+        },
+        "body": {},
+        "description": "Fetches all cases assigned to the logged-in doctor."
+      },
+      {
+        "name": "Get Cases for Patient",
+        "endpoint": "/cases/patient/{patient_id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": "Bearer <token>"
+        },
+        "body": {},
+        "description": "Retrieves all cases associated with a specific patient."
+      }
+    ]
+  }
+  

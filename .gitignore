@@ -1,0 +1,32 @@
+# Ignore environment files
+.env
+.env.test
+
+# Ignore logs and cache
+*.log
+
+# Ignore compiled Python files and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+
+# Ignore IDE and editor configurations
+.vscode/
+.idea/
+
+# Ignore Docker-related files
+Dockerfile
+
+# Ignore FastAPI and project-specific caches
+/app/__pycache__/
+/app/config/__pycache__/
+/app/db/__pycache__/
+/app/external_services/__pycache__/
+/app/middleware/__pycache__/
+/app/models/__pycache__/
+/app/routers/__pycache__/
+/app/schema/__pycache__/
+/app/utils/__pycache__/
+
