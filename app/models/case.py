@@ -122,6 +122,13 @@ def get_cases_by_doctor(doctor: dict) -> JSONResponse:
                 content={"cases": []}, status_code=status.HTTP_200_OK
             )
 
+        # Convert diagnosis keys to lowercase
+        for case in cases_list:
+            if "diagnosis" in case and isinstance(case["diagnosis"], dict):
+                case["diagnosis"] = {
+                    key.lower(): value for key, value in case["diagnosis"].items()
+                }
+
         processed_cases = [
             jsonable_encoder(Case(**case)) for case in cases_list
         ]
@@ -374,6 +381,7 @@ async def create_case(
             "case_id": str(uuid.uuid4()),
             "doctor_id": doctor_id,
             "patient_id": patient_id,
+            "patient_number": int(patient_number),
             "diagnosis": diagnosis["diagnosis"][0],
             "notes": case_notes if case_notes else [""],
             "image_id": image_id,
