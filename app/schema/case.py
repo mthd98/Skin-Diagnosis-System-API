@@ -38,6 +38,7 @@ class CaseBase(BaseModel):
 
     doctor_id: uuid.UUID
     patient_id: uuid.UUID
+    patient_number: Optional[int] = None
     diagnosis: Optional[DiagnosisResult] = None
     notes: Optional[List[str]] = Field(
         default_factory=list, description="Notes related to the case."
